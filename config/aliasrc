@@ -1,0 +1,33 @@
+#better ls
+#alias ls="ls -la --human-readable --color=auto"
+
+#even better ls
+alias ls="exa -laG --time-style long-iso --group-directories-first"
+
+#better grep
+alias grep="grep --color=auto"
+
+#ssh to server
+alias server="ssh server@$server"
+
+#rebind cd to zxide
+alias cd="z"
+alias cdi="zi"
+
+#disable rm training wheels
+alias rm="rm -rfv"
+
+#make a directory and cd into it
+function mkcd(){
+	if [ "$1" == "" ]; then
+		echo "no input given"
+		exit 1
+	elif [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
+		echo "Usage: mkcd <DirectoryName>"
+		echo "Options:"
+		echo "  --help or -h  show this message"
+	else
+		mkdir $1
+		cd $1
+	fi
+}
