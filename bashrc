@@ -76,7 +76,7 @@ if [ "$tty_color" = yes ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-   PS1='${debian_chroot:+($debian_chroot)}\[\033[1;33m\][\[\033[1;36m\]\u\[\033[1;33m\]]\[\033[1;00m\] > \[\033[1;33m\][\[\033[1;36m\]\h\[\033[1;33m\]]\[\033[1;00m\] > \[\033[1;33m\][\[\033[1;36m\]\w\[\033[1;33m\]]\[\033[1;00m\] > \[\033[1;36m\]'
+   PS1='${debian_chroot:+($debian_chroot)}\[\033[1;30m\][\[\033[1;36m\]\u\[\033[1;30m\]]\[\033[1;00m\] > \[\033[1;30m\][\[\033[1;36m\]\h\[\033[1;30m\]]\[\033[1;00m\] > \[\033[1;30m\][\[\033[1;36m\]\w\[\033[1;30m\]]\n\[\033[1;00m\]> \[\033[1;36m\]'
 fi
 
 unset color_prompt force_color_prompt tty_color force_tty_color
@@ -102,12 +102,13 @@ if ! shopt -oq posix; then
 fi
 
 neofetch
-export PATH=$PATH:~/.local/bin
-export server="insert your server ip here"
+export PATH=$PATH:/home/enrorma/.local/bin
+export server="62.224.183.5"
 export MAKEFLAGS="-j12"
-eval "$(zoxide init bash)"
 
 none="$(tput sgr0)"
 trap 'echo -ne "${none}"' DEBUG
+
+eval "$(zoxide init bash)"
 
 . $HOME/.config/aliasrc
