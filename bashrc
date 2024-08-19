@@ -102,8 +102,8 @@ if ! shopt -oq posix; then
 fi
 
 neofetch
-export PATH=$PATH:/home/enrorma/.local/bin
-export server="62.224.183.5"
+export PATH=$PATH:/home/luka/.local/bin
+export server="YOUR-IP-HERE"
 export MAKEFLAGS="-j12"
 
 none="$(tput sgr0)"
