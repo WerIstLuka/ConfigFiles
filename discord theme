@@ -1,0 +1,10 @@
+@import url('https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css');
+
+:root {
+    --font-primary: "Comic Mono";
+
+    /* above line changes the primary font only. You can also change the ones below (remove this line to activate the lines below)
+    --font-display: "Comic Mono";
+    --font-headline: "Comic Mono";
+    --font-code: "Comic Mono"; /* you should use a monospace font for this */
+}
