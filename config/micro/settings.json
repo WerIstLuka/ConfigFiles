@@ -1,4 +1,7 @@
 {
     "colorscheme": "luka",
-    "ftoptions": false
+    "ftoptions": false,
+    "relativeruler": true,
+    "softwrap": true,
+    "wordwrap": true
 }
