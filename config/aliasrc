@@ -17,6 +17,9 @@ alias cdi="zi"
 #disable rm training wheels
 alias rm="rm -rfv"
 
+#make micro easier
+alias mi="micro"
+
 #make a directory and cd into it
 function mkcd(){
 	if [ "$1" == "" ]; then
