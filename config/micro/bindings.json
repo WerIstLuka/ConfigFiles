@@ -4,7 +4,7 @@
 	"Alt-Right": "NextTab",	
 	"Alt-Shift-Down": "MoveLinesDown",
 	"Alt-Shift-Up": "MoveLinesUp",
-	"Alt-Up": "AddTab",
+	"Alt-n": "AddTab",
 	"Ctrl-N": "VSplit",
 	"Ctrl-/": "lua:comment.comment",
 	"Ctrl-D": "FindPrevious",
@@ -16,6 +16,6 @@
 	"Ctrl-X": "Quit",
 	"CtrlUnderscore": "lua:comment.comment",
 	"Ctrl-M": "HSplit",
-	"Ctrl-B": "command:bashmode",
+	"Ctrl-b": "command:bashmode",
 	"Alt-c": "CopyLine"
 }
