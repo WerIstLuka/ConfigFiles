@@ -3,8 +3,11 @@
 ## other stuff
 
 https://github.com/WerIstLuka/20.3-Mint-Y-Luka-Icons
+
 https://github.com/WerIstLuka/20.3-Mint-Y-Luka-Themes
+
 https://github.com/WerIstLuka/ds3stop
+
 https://github.com/WerIstLuka/Int
 
 ## applications
@@ -19,6 +22,7 @@ https://github.com/WerIstLuka/Int
 #### other
 
 https://www.spotify.com/uk/download/linux
+
 https://prismlauncher.org/download/
 
 ### pip
