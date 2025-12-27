@@ -1,0 +1,7 @@
+game:
+  exe: /media/luka/2tb-hdd-2/Lutris/NFSMW/drive_c/Program Files/EA GAMES/Need for
+    Speed Most Wanted/speed.exe
+  prefix: /media/luka/2tb-hdd-2/Lutris/NFSMW
+system:
+  locale: ''
+wine: {}
