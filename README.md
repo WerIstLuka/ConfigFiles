@@ -13,11 +13,15 @@ https://github.com/WerIstLuka/Int
 ## applications
 
 ### apt
-`steam dconf-cli openssh-server zoxide eza extrepo ghex gimp kdenlive obs-studio virt-manager qemu-kvm libvirt-daemon-system libvirt-clients git breeze-cursor-theme gcc g++ openjdk-8-jdk openjdk-17-jdk radeontop scanmem geary micro lutris golang htop meld oathtool gh`
+```
+sudo apt install steam dconf-cli openssh-server zoxide eza extrepo ghex gimp kdenlive obs-studio virt-manager qemu-kvm libvirt-daemon-system libvirt-clients git breeze-cursor-theme gcc g++ openjdk-8-jdk openjdk-17-jdk radeontop scanmem geary micro lutris golang htop meld oathtool gh python3-pip
+```
 
 #### librewolf
 
-`sudo extrepo enable librewolf`
+```
+sudo extrepo enable librewolf
+```
 
 #### other
 
@@ -26,7 +30,19 @@ https://www.spotify.com/uk/download/linux
 https://prismlauncher.org/download/
 
 ### pip
-`spotdl`
+```
+pip3 install spotdl --break-system-packages
+```
+
+### shell scripts
+
+```
+bash <(curl -sSL https://spotx-official.github.io/run.sh)
+```
+
+```
+sh -c "$(curl -sS https://vencord.dev/install.sh)"
+```
 
 ## cinnamon
 
