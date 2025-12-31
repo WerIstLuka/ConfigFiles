@@ -363,7 +363,7 @@
         "type": "colorchooser",
         "default": "rgba(48, 48, 48, 0.1)",
         "description": "Background Color",
-        "value": "rgba(48, 48, 48, 0.1)"
+        "value": "rgba(191,64,64,0)"
     },
     "percentAtEndOfLine": {
         "type": "switch",
