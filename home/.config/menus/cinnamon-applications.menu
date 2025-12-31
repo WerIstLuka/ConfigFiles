@@ -6,8 +6,8 @@
 	<Name>Applications</Name>
 	<MergeFile type="parent">/etc/xdg/menus/cinnamon-applications.menu</MergeFile>
 	<Menu>
-		<Name>alacarte-made-fdd3cdb0-d528-11f0-8be2-345a60ae84d1</Name>
-		<Directory>alacarte-made-fdd3cdb0-d528-11f0-8be2-345a60ae84d1.directory</Directory>
+		<Name>luka-applications</Name>
+		<Directory>luka-applications.directory</Directory>
 		<Include>
 			<Filename>org.gnome.Calculator.desktop</Filename>
 		</Include>
@@ -45,8 +45,8 @@
 	</Menu>
 	<DefaultLayout inline="false"/>
 	<Menu>
-		<Name>alacarte-made-0a52ad63-d529-11f0-b556-345a60ae84d1</Name>
-		<Directory>alacarte-made-0a52ad63-d529-11f0-b556-345a60ae84d1.directory</Directory>
+		<Name>luka-music-images-and-video</Name>
+		<Directory>luka-music-images-and-video.directory</Directory>
 		<Include>
 			<Filename>org.gnome.Screenshot.desktop</Filename>
 		</Include>
@@ -72,7 +72,6 @@
 	</Menu>
 	<Layout>
 		<Merge type="menus"/>
-		<Menuname>alacarte-made-fdd3cdb0-d528-11f0-8be2-345a60ae84d1</Menuname>
 		<Menuname>Science</Menuname>
 		<Menuname>webapps-webapps</Menuname>
 		<Menuname>Accessories</Menuname>
