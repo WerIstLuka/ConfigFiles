@@ -1,0 +1,239 @@
+[com/linuxmint/mintmenu/plugins/places]
+show-network=false
+
+[com/linuxmint/updates]
+show-welcome-page=false
+
+[org/cinnamon]
+alttab-switcher-delay=100
+alttab-switcher-style='icons+thumbnails'
+desklet-snap-interval=25
+enabled-applets=['panel1:right:55:systray@cinnamon.org:3', 'panel1:right:55:xapp-status@cinnamon.org:4', 'panel1:right:61:network@cinnamon.org:10', 'panel1:right:62:sound@cinnamon.org:11', 'panel1:right:63:calendar@cinnamon.org:13', 'panel1:left:2:gpumonitor@axel358:15', 'panel1:right:57:cpu-monitor-text@gnemonix:17', 'panel1:right:59:mem-monitor-text@datanom.net:18', 'panel1:left:1:spacer@cinnamon.org:19', 'panel1:right:60:force-quit@cinnamon.org:20', 'panel1:center:0:grouped-window-list@cinnamon.org:25', 'panel1:right:58:multicore-sys-monitor@ccadeptic23:29', 'panel1:left:0:22.2-menu@luka:66']
+enabled-desklets=['cpuload@kimse:0:775:0', 'diskspace@schorschii:1:1825:0']
+enabled-extensions=['transparent-panels@germanfr', 'opacify@anish.org', 'compiz-windows-effect@hermes83.github.com', 'opacity-slider@neatnit', 'user-shadows@nathan818fr']
+favorite-apps=['cinnamon-settings.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Screenshot.desktop', 'nemo.desktop']
+panels-enabled=['1:0:bottom']
+panels-height=['1:40', '2:40', '3:40', '4:40']
+window-effect-speed=1
+[org/cinnamon/desktop/background]
+picture-uri='file:///etc/illyria-default-lockscreen-nobrand.png'
+
+[org/cinnamon/desktop/interface]
+cursor-theme='breeze_cursors'
+first-day-of-week=1
+font-name='Comic Mono 16'
+gtk-theme='20.3-Mint-Y-Luka-Dark-Teal'
+icon-theme='20.3-Mint-Y-Luka-Teal'
+[org/cinnamon/desktop/keybindings]
+looking-glass-keybinding=['<Alt><Super>l']
+show-desklets=@as []
+[org/cinnamon/desktop/keybindings/media-keys]
+logout=@as []
+mic-mute=['<Super>m']
+next=['<Alt><Super>Page_Up']
+play=['<Alt><Super>End']
+previous=['<Alt><Super>Page_Down']
+screensaver=['<Super>l', 'XF86ScreenSaver']
+shutdown=['XF86PowerOff']
+volume-down=['<Super>Page_Down']
+volume-up=['<Super>Page_Up']
+[org/cinnamon/desktop/keybindings/wm]
+activate-window-menu=@as []
+unmaximize=@as []
+[org/cinnamon/desktop/notifications]
+display-notifications=false
+
+[org/cinnamon/desktop/peripherals/mouse]
+accel-profile='flat'
+speed=-0.95999999999999996
+[org/cinnamon/desktop/privacy]
+remember-recent-files=false
+
+[org/cinnamon/desktop/screensaver]
+allow-media-control=false
+date-format='%d/%m/%Y'
+time-format='%H:%M:%S'
+font-date='Comic Mono 24'
+font-time='Comic Mono 64'
+lock-delay=uint32 30
+show-album-art=false
+show-info-panel=false
+use-custom-format=true
+[org/cinnamon/desktop/sound]
+event-sounds=false
+volume-sound-enabled=false
+[org/cinnamon/desktop/wm/preferences]
+action-double-click-titlebar='none'
+action-middle-click-titlebar='none'
+action-scroll-titlebar='opacity'
+titlebar-font='Comic Mono 16'
+min-window-opacity=10
+mouse-button-modifier=''
+num-workspaces=2
+workspace-names=['Primary', 'Music']
+[org/cinnamon/muffin]
+draggable-border-width=10
+experimental-features=@as []
+tile-maximize=false
+[org/cinnamon/settings-daemon/peripherals/keyboard]
+numlock-state='off'
+
+[org/cinnamon/settings-daemon/plugins/power]
+sleep-display-ac=0
+
+[org/cinnamon/sounds]
+login-enabled=true
+login-file='/etc/ps3.wav'
+logout-enabled=false
+notification-enabled=false
+plug-enabled=false
+tile-enabled=false
+unplug-enabled=false
+[org/cinnamon/theme]
+name='20.3-Mint-Y-Luka-Dark-Teal'
+
+[org/gnome/calculator]
+show-thousands=true
+
+[org/gnome/charmap]
+last-char=uint32 223
+
+[org/gnome/desktop/interface]
+clock-format='24h'
+document-font-name='Comic Mono 16'
+enable-animations=true
+font-name='Comic Mono 16'
+gtk-theme='20.3-Mint-Y-Luka-Dark-Teal'
+icon-theme='20.3-Mint-Y-Luka-Teal'
+monospace-font-name='Comic Mono 16'
+[org/gnome/desktop/sound]
+event-sounds=false
+input-feedback-sounds=false
+theme-name='LinuxMint'
+[org/gnome/desktop/wm/preferences]
+action-double-click-titlebar='none'
+action-middle-click-titlebar='none'
+action-right-click-titlebar='menu'
+audible-bell=false
+auto-raise=false
+disable-workarounds=false
+[org/gnome/file-roller/dialogs/new]
+default-extension='.tar.xz'
+
+[org/gnome/gnome-system-monitor]
+cpu-colors=[(uint32 0, 'rgb(89,195,173)'), (1, 'rgb(89,195,173)'), (2, 'rgb(89,195,173)'), (3, 'rgb(89,195,173)'), (4, 'rgb(89,195,173)'), (5, 'rgb(89,195,173)'), (6, 'rgb(89,195,173)'), (7, 'rgb(89,195,173)'), (8, 'rgb(89,195,173)'), (9, 'rgb(89,195,173)'), (10, 'rgb(89,195,173)'), (11, 'rgb(89,195,173)'), (12, '#aaffc3'), (13, '#469990'), (14, '#000075'), (15, '#e6beff')]
+mem-color='rgb(89,195,173)'
+network-total-in-bits=false
+process-memory-in-iec=false
+show-dependencies=false
+show-whose-processes='user'
+solaris-mode=true
+update-interval=1000
+[org/gnome/gnome-system-monitor/proctree]
+col-0-visible=true
+col-0-width=1553
+col-1-visible=false
+col-8-visible=true
+col-12-visible=true
+col-22-visible=false
+col-23-visible=false
+col-24-visible=false
+col-25-visible=false
+col-26-visible=false
+columns-order=[12, 0, 8, 15, 1, 2, 3, 4, 6, 7, 9, 10, 11, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+sort-col=8
+sort-order=0
+[org/gnome/rhythmbox]
+time-display=false
+
+[org/gnome/rhythmbox/player]
+play-order='random-by-age-and-rating'
+volume=1.0
+[org/gnome/rhythmbox/plugins]
+active-plugins=['mtpdevice', 'iradio', 'power-manager', 'generic-player', 'mpris', 'audiocd', 'rb', 'daap', 'android', 'dbus-media-server', 'ipod', 'audioscrobbler', 'discord-status']
+
+[org/gnome/rhythmbox/plugins/audioscrobbler/Last.fm]
+scrobbling-enabled=true
+
+[org/gnome/rhythmbox/sources]
+visible-columns=['post-time', 'album', 'artist', 'duration']
+
+[org/gnome/settings-daemon/plugins/xsettings]
+disabled-gtk-modules=@as []
+enabled-gtk-modules=@as []
+overrides=@a{sv} {}
+[org/gnome/terminal/legacy]
+default-show-menubar=false
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+background-color='rgb(0,0,0)'
+background-transparency-percent=20
+bold-color-same-as-fg=true
+cursor-blink-mode='off'
+default-size-columns=97
+default-size-rows=25
+font='Comic Mono 16'
+foreground-color='rgb(255,255,255)'
+highlight-background-color='rgb(105,105,105)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(89,195,173)'
+palette=['rgb(48,48,48)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(89,195,173)', 'rgb(255,255,255)', 'rgb(105,105,105)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(89,195,173)', 'rgb(255,255,255)']
+use-system-font=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=true
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+show-size-column=true
+show-type-column=true
+sidebar-width=226
+sort-column='name'
+sort-directories-first=true
+sort-order='ascending'
+type-format='category'
+[org/nemo/desktop]
+font='Comic Mono 16'
+volumes-visible=false
+[org/nemo/plugins]
+disabled-actions=['set-as-background.nemo_action', 'set-resolution.nemo_action', 'warpinator-send.nemo_action', 'mintstick-verify.nemo_action', 'add-desklets.nemo_action', 'change-background.nemo_action']
+
+[org/nemo/preferences]
+date-font-choice='no-mono'
+never-queue-file-ops=true
+show-advanced-permissions=true
+show-compact-view-icon-toolbar=true
+show-computer-icon-toolbar=false
+show-hidden-files=true
+show-open-in-terminal-toolbar=false
+show-show-thumbnails-toolbar=false
+swap-trash-delete=true
+[org/nemo/preferences/menu-config]
+desktop-menu-customize=true
+iconview-menu-arrange-items=false
+iconview-menu-organize-by-name=false
+selection-menu-favorite=false
+selection-menu-make-link=true
+selection-menu-move-to-trash=false
+selection-menu-open-in-new-tab=false
+selection-menu-pin=false
+[org/nemo/search]
+search-content-case-sensitive=false
+search-content-use-regex=false
+search-file-case-sensitive=false
+search-files-recursively=true
+search-reverse-sort=false
+search-sort-column='where'
+[org/nemo/window-state]
+devices-expanded=true
+network-expanded=false
+sidebar-bookmark-breakpoint=3
+sidebar-width=224
+start-with-sidebar=true
+[org/virt-manager/virt-manager]
+xmleditor-enabled=true
+
+[org/x/apps/portal]
+color-scheme='prefer-dark'
+

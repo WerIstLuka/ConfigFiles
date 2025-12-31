@@ -1,5 +1,11 @@
 # my config files
 
+## easy install (only works with apt)
+run this script
+```
+./apply-config.sh
+```
+
 ## other stuff
 
 https://github.com/WerIstLuka/20.3-Mint-Y-Luka-Icons
