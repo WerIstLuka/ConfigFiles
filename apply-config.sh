@@ -10,7 +10,7 @@ fi
 
 echo "updating and installing packages"
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y steam dconf-cli openssh-server zoxide eza extrepo ghex gimp kdenlive obs-studio virt-manager qemu-kvm libvirt-daemon-system libvirt-clients git breeze-cursor-theme gcc g++ openjdk-8-jdk openjdk-17-jdk radeontop scanmem geary micro lutris golang htop meld oathtool gh python3-pip radeontop
+sudo apt install -y steam dconf-cli openssh-server zoxide eza extrepo ghex gimp kdenlive obs-studio virt-manager qemu-kvm libvirt-daemon-system libvirt-clients git breeze-cursor-theme gcc g++ openjdk-8-jdk openjdk-17-jdk radeontop scanmem geary micro lutris golang htop meld oathtool gh python3-pip radeontop xapp-vorbiscomment-thumbnailer
 #out of repo stuff
 sudo extrepo enable librewolf
 
