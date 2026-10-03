@@ -8,9 +8,9 @@ show-welcome-page=false
 alttab-switcher-delay=100
 alttab-switcher-style='icons+thumbnails'
 desklet-snap-interval=25
-enabled-applets=['panel1:right:55:systray@cinnamon.org:3', 'panel1:right:55:xapp-status@cinnamon.org:4', 'panel1:right:61:network@cinnamon.org:10', 'panel1:right:62:sound@cinnamon.org:11', 'panel1:right:63:calendar@cinnamon.org:13', 'panel1:left:2:gpumonitor@axel358:15', 'panel1:right:57:cpu-monitor-text@gnemonix:17', 'panel1:right:59:mem-monitor-text@datanom.net:18', 'panel1:left:1:spacer@cinnamon.org:19', 'panel1:right:60:force-quit@cinnamon.org:20', 'panel1:center:0:grouped-window-list@cinnamon.org:25', 'panel1:right:58:multicore-sys-monitor@ccadeptic23:29', 'panel1:left:0:22.2-menu@luka:66']
-enabled-desklets=['cpuload@kimse:0:775:0', 'diskspace@schorschii:1:1825:0']
-enabled-extensions=['transparent-panels@germanfr', 'opacify@anish.org', 'compiz-windows-effect@hermes83.github.com', 'opacity-slider@neatnit', 'user-shadows@nathan818fr']
+enabled-applets=['panel1:right:0:xapp-status@cinnamon.org:4', 'panel1:right:5:network@cinnamon.org:10', 'panel1:right:6:sound@cinnamon.org:11', 'panel1:right:7:calendar@cinnamon.org:13', 'panel1:left:2:spacer@cinnamon.org:19', 'panel1:center:0:grouped-window-list@cinnamon.org:25', 'panel1:left:0:LukaMenu@luka:73', 'panel1:left:3:gpumonitor@axel358:80', 'panel1:right:2:multicore-sys-monitor@ccadeptic23:82', 'panel1:right:1:cpu-monitor-text@gnemonix:83', 'panel1:right:4:mem-monitor-text@datanom.net:84']
+enabled-desklets=@as []
+enabled-extensions=['compiz-windows-effect@hermes83.github.com', 'BlurCinnamon@klangman', 'transparent-panels@germanfr', 'opacity-slider@neatnit', 'opacify@anish.org', 'user-shadows@nathan818fr']
 favorite-apps=['cinnamon-settings.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Screenshot.desktop', 'nemo.desktop']
 panels-enabled=['1:0:bottom']
 panels-height=['1:40', '2:40', '3:40', '4:40']
@@ -41,7 +41,7 @@ volume-up=['<Super>Page_Up']
 activate-window-menu=@as []
 unmaximize=@as []
 [org/cinnamon/desktop/notifications]
-display-notifications=false
+display-notifications=true
 
 [org/cinnamon/desktop/peripherals/mouse]
 accel-profile='flat'
@@ -85,7 +85,7 @@ sleep-display-ac=0
 login-enabled=true
 login-file='/etc/ps3.wav'
 logout-enabled=false
-notification-enabled=false
+notification-enabled=true
 plug-enabled=false
 tile-enabled=false
 unplug-enabled=false
@@ -96,7 +96,7 @@ name='20.3-Mint-Y-Luka-Dark-Teal'
 show-thousands=true
 
 [org/gnome/charmap]
-last-char=uint32 223
+last-char=uint32 252
 
 [org/gnome/desktop/interface]
 clock-format='24h'
@@ -118,7 +118,7 @@ audible-bell=false
 auto-raise=false
 disable-workarounds=false
 [org/gnome/file-roller/dialogs/new]
-default-extension='.tar.xz'
+default-extension='.zip'
 
 [org/gnome/gnome-system-monitor]
 cpu-colors=[(uint32 0, 'rgb(89,195,173)'), (1, 'rgb(89,195,173)'), (2, 'rgb(89,195,173)'), (3, 'rgb(89,195,173)'), (4, 'rgb(89,195,173)'), (5, 'rgb(89,195,173)'), (6, 'rgb(89,195,173)'), (7, 'rgb(89,195,173)'), (8, 'rgb(89,195,173)'), (9, 'rgb(89,195,173)'), (10, 'rgb(89,195,173)'), (11, 'rgb(89,195,173)'), (12, '#aaffc3'), (13, '#469990'), (14, '#000075'), (15, '#e6beff')]
@@ -131,7 +131,7 @@ solaris-mode=true
 update-interval=1000
 [org/gnome/gnome-system-monitor/proctree]
 col-0-visible=true
-col-0-width=1553
+col-0-width=474
 col-1-visible=false
 col-8-visible=true
 col-12-visible=true
@@ -150,13 +150,13 @@ time-display=false
 play-order='random-by-age-and-rating'
 volume=1.0
 [org/gnome/rhythmbox/plugins]
-active-plugins=['mtpdevice', 'iradio', 'power-manager', 'generic-player', 'mpris', 'audiocd', 'rb', 'daap', 'android', 'dbus-media-server', 'ipod', 'audioscrobbler', 'discord-status']
+active-plugins=['generic-player', 'ipod', 'android', 'rb', 'replaygain', 'lyrics', 'audiocd', 'iradio', 'mpris', 'audioscrobbler', 'dbus-media-server', 'power-manager', 'mtpdevice']
 
 [org/gnome/rhythmbox/plugins/audioscrobbler/Last.fm]
 scrobbling-enabled=true
 
 [org/gnome/rhythmbox/sources]
-visible-columns=['post-time', 'album', 'artist', 'duration']
+visible-columns=['post-time', 'duration', 'album', 'artist']
 
 [org/gnome/settings-daemon/plugins/xsettings]
 disabled-gtk-modules=@as []
@@ -170,8 +170,8 @@ background-color='rgb(0,0,0)'
 background-transparency-percent=20
 bold-color-same-as-fg=true
 cursor-blink-mode='off'
-default-size-columns=97
-default-size-rows=25
+default-size-columns=92
+default-size-rows=21
 font='Comic Mono 16'
 foreground-color='rgb(255,255,255)'
 highlight-background-color='rgb(105,105,105)'
@@ -185,7 +185,7 @@ use-transparent-background=true
 [org/gtk/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=true
+show-hidden=false
 show-size-column=true
 show-type-column=true
 sidebar-width=226
@@ -222,14 +222,14 @@ selection-menu-pin=false
 search-content-case-sensitive=false
 search-content-use-regex=false
 search-file-case-sensitive=false
-search-files-recursively=true
-search-reverse-sort=false
-search-sort-column='where'
+search-files-recursively=false
+search-reverse-sort=true
+search-sort-column='name'
 [org/nemo/window-state]
 devices-expanded=true
-network-expanded=false
+network-expanded=true
 sidebar-bookmark-breakpoint=3
-sidebar-width=224
+sidebar-width=226
 start-with-sidebar=true
 [org/virt-manager/virt-manager]
 xmleditor-enabled=true

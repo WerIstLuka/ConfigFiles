@@ -10,7 +10,7 @@ fi
 
 echo "updating and installing packages"
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y steam dconf-cli openssh-server zoxide eza extrepo ghex gimp kdenlive obs-studio virt-manager qemu-kvm libvirt-daemon-system libvirt-clients git breeze-cursor-theme gcc g++ openjdk-8-jdk openjdk-17-jdk radeontop scanmem geary micro lutris golang htop meld oathtool gh python3-pip radeontop xapp-vorbiscomment-thumbnailer
+sudo apt install -y steam dconf-cli openssh-server zoxide eza extrepo ghex gimp kdenlive obs-studio virt-manager qemu-kvm libvirt-daemon-system libvirt-clients git breeze-cursor-theme gcc g++ openjdk-8-jdk openjdk-17-jdk radeontop scanmem geary micro lutris golang htop meld oathtool gh python3-pip xapp-vorbiscomment-thumbnailer
 #out of repo stuff
 sudo extrepo enable librewolf
 
@@ -19,6 +19,8 @@ url=$(curl -i https://github.com/WerIstLuka/20.3-Mint-Y-Luka-Icons/releases/late
 wget $url/20.3-Mint-Y-Luka-Icons.deb
 url=$(curl -i https://github.com/WerIstLuka/20.3-Mint-Y-Luka-Themes/releases/latest | sed 's/\r$//' | grep -Po "(?<=location: ).+" | sed s/tag/download/)
 wget $url/20.3-Mint-Y-Luka-Themes.deb
+url=$(curl -i https://github.com/WerIstLuka/LukaMenu/releases/latest | sed 's/\r$//' | grep -Po "(?<=location: ).+" | sed s/tag/download/)
+wget $url/luka-menu.deb
 
 wget https://dtinth.github.io/comic-mono-font/ComicMono.ttf -O ComicMono.ttf > /dev/null
 
@@ -35,12 +37,6 @@ echo "installing applets"
 git clone https://github.com/linuxmint/cinnamon-spices-applets > /dev/null
 pushd cinnamon-spices-applets/ > /dev/null
 cp -r {gpumonitor@axel358/files/*,cpu-monitor-text@gnemonix/files/*,multicore-sys-monitor@ccadeptic23/files/*,mem-monitor-text@datanom.net/files/*} ~/.local/share/cinnamon/applets/
-popd > /dev/null
-
-echo "installing desklets"
-git clone https://github.com/linuxmint/cinnamon-spices-desklets > /dev/null
-pushd cinnamon-spices-desklets/ > /dev/null
-cp -r {cpuload@kimse/files/*,diskspace@schorschii/files/*} ~/.local/share/cinnamon/desklets/
 popd > /dev/null
 
 echo "installing extensions"

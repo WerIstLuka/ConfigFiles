@@ -82,19 +82,21 @@
             "keys": [
                 "show-lock",
                 "show-logout",
-                "show-quit"
+                "show-quit",
+                "old-quit-dialog"
             ]
         },
         "menu-options": {
             "type": "section",
             "title": "Menu Options",
             "keys": [
+                "show-category-hover",
+                "category-keyboard-navigation",
                 "show-name",
                 "show-description",
                 "lock-size",
                 "inf-size",
-                "luka-size",
-                "restart-cinnamon"
+                "luka-size"
             ]
         }
     },
@@ -137,7 +139,7 @@
         "description": "Text",
         "tooltip": "Enter custom text to show in the panel.",
         "dependency": "menu-custom",
-        "value": "Linux Mint"
+        "value": "Mint"
     },
     "show-category-icons": {
         "type": "switch",
@@ -307,6 +309,25 @@
         "description": "Show quit button",
         "value": true
     },
+    "old-quit-dialog": {
+        "type": "switch",
+        "default": false,
+        "description": "Use the old gtk quit dialog",
+        "value": false
+    },
+    "show-category-hover": {
+        "type": "switch",
+        "default": false,
+        "description": "Highlight Category on hover",
+        "value": false
+    },
+    "category-keyboard-navigation": {
+        "type": "switch",
+        "default": false,
+        "description": "Switch categories immediately by using arrow keys",
+        "tooltip": "Change categories on hover but only for keyboard navigation",
+        "value": true
+    },
     "show-name": {
         "type": "switch",
         "default": true,
@@ -323,7 +344,6 @@
         "type": "switch",
         "default": false,
         "description": "Lock the menu size",
-        "tooltip": "needs cinnamon restart\n\npress ctrl+alt+esc to restart cinnamon\n\nor press the button below",
         "value": true
     },
     "inf-size": {
@@ -337,10 +357,5 @@
         "description": "Set the menu to my preffered size",
         "callback": "_lukaSize"
     },
-    "restart-cinnamon": {
-        "type": "button",
-        "description": "Restart cinnamon",
-        "callback": "_restartCinnamon"
-    },
-    "__md5__": "ba6bd30375c2c321c160f31d8d4502dc"
+    "__md5__": "cc35708a875aea965fa40f6e4d3e7f3d"
 }

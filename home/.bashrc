@@ -110,5 +110,6 @@ none="$(tput sgr0)"
 trap 'echo -ne "${none}"' DEBUG
 
 eval "$(zoxide init bash)"
+zoxide add "$PWD"
 
 . $HOME/.config/aliasrc
