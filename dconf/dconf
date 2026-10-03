@@ -40,6 +40,10 @@ volume-up=['<Super>Page_Up']
 [org/cinnamon/desktop/keybindings/wm]
 activate-window-menu=@as []
 unmaximize=@as []
+[org/cinnamon/desktop/keybindings/custom-keybindings/custom0]
+binding=['<Super>r']
+command="bash -c 'killall -SIGUSR1 gpu-screen-recorder && task=$(notify-send \"GPU Screen Recorder\" \"Replay saved\" --action=Play=\"Play\" --action=dir=\"Open Directory\" -u low); if [ \"$task\" == \"Play\" ]; then file=$(\\ls -Art /mnt/2tb-hdd-3/Videos/Replay | tail -n 1); celluloid /mnt/2tb-hdd-3/Videos/Replay/$file; elif [ \"$task\" == \"dir\" ]; then nemo /mnt/2tb-hdd-3/Videos/Replay; fi'"
+name='gpu-screen-recorder save replay'
 [org/cinnamon/desktop/notifications]
 display-notifications=true
 
