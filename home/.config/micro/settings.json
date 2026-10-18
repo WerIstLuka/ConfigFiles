@@ -1,6 +1,9 @@
 {
     "colorscheme": "luka",
     "ftoptions": false,
+    "hltrailingws": true,
+    "lockbindings": true,
     "softwrap": true,
+    "statusformatr": "",
     "wordwrap": true
 }

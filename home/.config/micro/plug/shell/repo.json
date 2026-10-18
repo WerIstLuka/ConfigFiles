@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "shell",
+    "Description": "runs bash",
+    "Tags": [
+      "shell", "bash"
+    ],
+    "Versions": [
+    ]
+  }
+]
