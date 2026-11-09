@@ -21,6 +21,6 @@ for key in data:
 			# os.system(f"dconf read /{key}/{i}")
 			value = os.popen(f"dconf read /{key}/{i}").read()
 			newfile += f"{i}={value}"
-				
+
 	with open("dconf", "w") as output:
-		output.write(newfile)		
+		output.write(newfile)
