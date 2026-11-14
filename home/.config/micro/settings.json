@@ -3,7 +3,10 @@
     "ftoptions": false,
     "hltrailingws": true,
     "lockbindings": true,
+    "parsecursor": true,
     "softwrap": true,
     "statusformatr": "",
-    "wordwrap": true
+    "wordwrap": true,
+    "ydir.Default": "tab",
+    "ydir.HorizontalCursorMovement": false,
 }

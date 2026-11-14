@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "py",
+    "Description": "run python command",
+    "Tags": [
+      "python"
+    ],
+    "Versions": [
+    ]
+  }
+]

@@ -15,7 +15,7 @@ function insert(bp, args)
 		text = text .. " "
 	end
 
-	exitCode = os.execute('bash -c "' .. text .. '"' .. ' 2> /dev/null > /dev/null')
+	local exitCode = os.execute('bash -c "' .. text .. '"' .. ' 2> /dev/null > /dev/null')
 	if exitCode ~= 0 then
 		local cmd = io.popen('bash -c "' .. text .. '"' .. ' 2> /dev/stdout')
 		local err = cmd:read('*a')
