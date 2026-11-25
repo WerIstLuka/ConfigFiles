@@ -10,23 +10,27 @@ fi
 
 echo "updating and installing packages"
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y steam dconf-cli openssh-server zoxide eza extrepo ghex gimp kdenlive obs-studio virt-manager qemu-kvm libvirt-daemon-system libvirt-clients git breeze-cursor-theme gcc g++ openjdk-8-jdk openjdk-17-jdk radeontop scanmem geary micro lutris golang htop meld oathtool gh python3-pip xapp-vorbiscomment-thumbnailer
+sudo apt install -y steam dconf-cli openssh-server zoxide eza extrepo ghex gimp kdenlive obs-studio virt-manager libvirt-daemon-system libvirt-clients git gcc g++ openjdk-8-jdk openjdk-17-jdk radeontop scanmem geary micro lutris golang htop meld oathtool gh python3-pip xapp-vorbiscomment-thumbnailer
 #out of repo stuff
 sudo extrepo enable librewolf
 
 #gonna kill myself because of this
-url=$(curl -i https://github.com/WerIstLuka/20.3-Mint-Y-Luka-Icons/releases/latest | sed 's/\r$//' | grep -Po "(?<=location: ).+" | sed s/tag/download/)
-wget $url/20.3-Mint-Y-Luka-Icons.deb
-url=$(curl -i https://github.com/WerIstLuka/20.3-Mint-Y-Luka-Themes/releases/latest | sed 's/\r$//' | grep -Po "(?<=location: ).+" | sed s/tag/download/)
-wget $url/20.3-Mint-Y-Luka-Themes.deb
-url=$(curl -i https://github.com/WerIstLuka/LukaMenu/releases/latest | sed 's/\r$//' | grep -Po "(?<=location: ).+" | sed s/tag/download/)
-wget $url/luka-menu.deb
+cd packages
+downloadGitRelease(){
+	url=$(curl -i $1 | sed 's/\r$//' | grep -Po "(?<=location: ).+" | sed s/tag/download/)
+	wget $url/$2
+}
+
+downloadGitRelease "https://github.com/WerIstLuka/20.3-Mint-Y-Luka-Icons/releases/latest" "20.3-Mint-Y-Luka-Icons.deb"
+downloadGitRelease "https://github.com/WerIstLuka/20.3-Mint-Y-Luka-Themes/releases/latest" "20.3-Mint-Y-Luka-Themes.deb"
+downloadGitRelease "https://github.com/WerIstLuka/LukaMenu/releases/latest" "luka-menu.deb"
+cd ..
 
 wget https://dtinth.github.io/comic-mono-font/ComicMono.ttf -O ComicMono.ttf > /dev/null
 
 sudo apt update
 sudo apt install librewolf -y
-sudo dpkg -i 20.3-Mint-Y-Luka*.deb
+sudo dpkg -i ./*.deb
 
 sudo chown -R root:root etc
 sudo cp -r etc /
