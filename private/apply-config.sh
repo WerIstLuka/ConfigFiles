@@ -5,13 +5,10 @@ read -r -p "enter \"done\" to continue: " continue
 
 if [ "$continue" != "done" ]; then
 	exit 1
-fi
+f
 
-# privates
-# discord, lutris, vencord
-
-# echo "applying .config"
-# cp -r home/luka/.config ~/
+echo "applying .config"
+cp -r home/luka/.config ~/
 
 # echo "applying .local"
 # cp -r home/luka/.local ~/
