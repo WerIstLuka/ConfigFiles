@@ -1,0 +1,217 @@
+{
+    "layout": {
+        "type": "layout",
+        "pages": [
+            "general-page",
+            "exclude-page",
+            "power-page"
+        ],
+        "general-page": {
+            "type": "page",
+            "title": "General",
+            "sections": [
+                "preset-section",
+                "effect-settings-section"
+            ]
+        },
+        "exclude-page": {
+            "type": "page",
+            "title": "Exclude List",
+            "sections": [
+                "exclude-section"
+            ]
+        },
+        "power-page": {
+            "type": "page",
+            "title": "Power",
+            "sections": [
+                "power-section"
+            ]
+        },
+        "preset-section": {
+            "type": "section",
+            "title": "Compiz windows effect configuration",
+            "keys": [
+                "presetList"
+            ]
+        },
+        "effect-settings-section": {
+            "type": "section",
+            "title": "Custom effect settings",
+            "dependency": "presetList=5",
+            "keys": [
+                "friction",
+                "springK",
+                "speedupFactorDivider",
+                "mass",
+                "xTiles",
+                "yTiles",
+                "maxUnmaxFactor"
+            ]
+        },
+        "exclude-section": {
+            "type": "section",
+            "title": "Application windows where no window effects will be applied",
+            "keys": [
+                "excludeList",
+                "excludeButton"
+            ]
+        },
+        "power-section": {
+            "type": "section",
+            "title": "Manage power consumption",
+            "keys": [
+                "power-onbattery",
+                "power-percent",
+                "powerPresetList"
+            ]
+        }
+    },
+    "presetList": {
+        "type": "combobox",
+        "default": 5,
+        "options": {
+            "Subtle": 1,
+            "Realistic": 2,
+            "Exaggerated": 3,
+            "Extreme": 4,
+            "Custom": 5
+        },
+        "description": "Effect style",
+        "value": 5
+    },
+    "powerPresetList": {
+        "type": "combobox",
+        "default": 0,
+        "options": {
+            "None": 0,
+            "Subtle": 1,
+            "Realistic": 2,
+            "Exaggerated": 3,
+            "Extreme": 4,
+            "Custom": 5
+        },
+        "dependency": "power-onbattery=true",
+        "description": "Effect style when running on battery power",
+        "value": 0
+    },
+    "power-onbattery": {
+        "type": "switch",
+        "description": "Use different effect settings when running on battery power",
+        "tooltip": "When enabled, a set of options will appear allowing you to define the effect settings used when running on battery power and the battery charge state is less than the set limit. These settings will take precedence over the general settings when the battery charge state condition is met.",
+        "default": false,
+        "value": false
+    },
+    "power-percent": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "When battery is less than (percent)",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "dependency": "power-onbattery=true",
+        "default": 50,
+        "value": 50
+    },
+    "excludeList": {
+        "type": "list",
+        "height": 375,
+        "description": "Application exclude list",
+        "columns": [
+            {
+                "id": "application",
+                "title": "Application",
+                "type": "string",
+                "default": ""
+            }
+        ],
+        "tooltip": "Defines a list of applications where the \"Compiz window effect\" effects will not be applied.",
+        "default": [],
+        "value": []
+    },
+    "excludeButton": {
+        "type": "button",
+        "description": "Add entry for the application of the most recently focused window",
+        "callback": "on_exclude_button_pressed",
+        "tooltip": "Focus the window you want to disable window effects for, then return here and press this button."
+    },
+    "friction": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Friction ",
+        "min": 1,
+        "max": 10,
+        "default": 3.5,
+        "step": 0.1,
+        "value": 3.5
+    },
+    "springK": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Spring K",
+        "min": 1,
+        "max": 10,
+        "default": 8.5,
+        "step": 0.1,
+        "value": 10
+    },
+    "speedupFactorDivider": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Speedup",
+        "min": 2,
+        "max": 40,
+        "default": 16,
+        "step": 0.1,
+        "value": 40
+    },
+    "mass": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Mass      ",
+        "min": 20,
+        "max": 80,
+        "default": 50,
+        "step": 1,
+        "value": 80.0
+    },
+    "xTiles": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "X Tiles  ",
+        "min": 3,
+        "max": 20,
+        "default": 6,
+        "step": 1,
+        "value": 20
+    },
+    "yTiles": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Y Tiles  ",
+        "min": 3,
+        "max": 20,
+        "default": 6,
+        "step": 1,
+        "value": 20
+    },
+    "maxUnmaxFactor": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Maximizing and Unmaximizing Factor",
+        "min": 0,
+        "max": 10,
+        "default": 3,
+        "step": 1,
+        "value": 0.0
+    },
+    "__md5__": "8a03b607c80036886e78d2a981bd829e"
+}

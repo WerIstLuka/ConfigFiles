@@ -1,0 +1,14 @@
+{
+    "colorscheme": "luka",
+    "ftoptions": false,
+    "hltaberrors": true,
+    "hltrailingws": true,
+    "lockbindings": true,
+    "matchbracestyle": "highlight",
+    "parsecursor": true,
+    "softwrap": true,
+    "statusformatr": "$(lines)L $(percentage)%",
+    "wordwrap": true,
+    "ydir.Default": "tab",
+    "ydir.HorizontalCursorMovement": false
+}

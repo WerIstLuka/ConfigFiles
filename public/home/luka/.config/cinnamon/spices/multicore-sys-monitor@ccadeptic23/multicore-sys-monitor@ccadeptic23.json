@@ -1,0 +1,2907 @@
+{
+    "layout": {
+        "type": "layout",
+        "pages": [
+            "pageGeneral",
+            "pageCPU",
+            "pageMem",
+            "pageNetwork",
+            "pageDisk",
+            "pageDiskUsage",
+            "pageBattery",
+            "pageColors"
+        ],
+        "pageGeneral": {
+            "type": "page",
+            "title": "General",
+            "sections": [
+                "sectionGeneralOptions",
+                "sectionGeneralOrder",
+                "sectionGeneralColors",
+                "sectionTooltip",
+                "sectionTooltipCustomTranslations",
+                "sectionSystemMonitor"
+            ]
+        },
+        "pageCPU": {
+            "type": "page",
+            "title": "CPU",
+            "sections": [
+                "sectionCPUOptions",
+                "sectionCPULabel",
+                "sectionCPUColors",
+                "sectionCPUColorsByActivity",
+                "sectionCPUTemperature",
+                "sectionCPULoadAverage",
+                "sectionCPUStuckProcess"
+            ]
+        },
+        "pageMem": {
+            "type": "page",
+            "title": "Memory",
+            "sections": [
+                "sectionMemoryOptions",
+                "sectionMemoryLabel",
+                "sectionMemoryColors"
+            ]
+        },
+        "pageNetwork": {
+            "type": "page",
+            "title": "Network",
+            "sections": [
+                "sectionNetworkOptions",
+                "sectionNetworkLabel",
+                "sectionNetworkScaling",
+                "sectionNetworkTooltip",
+                "sectionNetworkDevices",
+                "sectionNetworkTotal"
+            ]
+        },
+        "pageDisk": {
+            "type": "page",
+            "title": "Disk IO",
+            "sections": [
+                "sectionDiskOptions",
+                "sectionDiskLabel",
+                "sectionDiskScaling",
+                "sectionDiskTooltip",
+                "sectionDiskDevices",
+                "sectionDiskSpeed"
+            ]
+        },
+        "pageDiskUsage": {
+            "type": "page",
+            "title": "Disk Usage",
+            "sections": [
+                "sectionDiskUsageOptions",
+                "sectionDiskUsageLabel",
+                "sectionDiskUsageColors",
+                "sectionDiskUsagePaths"
+            ]
+        },
+        "pageBattery": {
+            "type": "page",
+            "title": "Battery",
+            "sections": [
+                "sectionBatteryOptions",
+                "sectionBatteryLabel",
+                "sectionBatteryColors",
+                "sectionBatteryPaths"
+            ]
+        },
+        "pageColors": {
+            "type": "page",
+            "title": "Colors",
+            "sections": [
+                "sectionColors"
+            ]
+        },
+        "sectionGeneralOptions": {
+            "type": "section",
+            "title": "Options",
+            "keys": [
+                "removeEnlightenment",
+                "labelsOn",
+                "borderOn",
+                "borderRadius",
+                "graphStep",
+                "graphStepApply",
+                "graphSpacing",
+                "thickness",
+                "ledForCurves",
+                "ledLocation",
+                "useIconSize",
+                "graphHeightPercent",
+                "refreshRate"
+            ]
+        },
+        "sectionGeneralOrder": {
+            "type": "section",
+            "title": "Display Order",
+            "keys": [
+                "displayOrderLabel",
+                "displayOrder",
+                "displayOrderReinit"
+            ]
+        },
+        "sectionGeneralColors": {
+            "type": "section",
+            "title": "Colors",
+            "keys": [
+                "labelColor",
+                "borderColor",
+                "backgroundColor"
+            ]
+        },
+        "sectionTooltip": {
+            "type": "section",
+            "title": "Tooltip",
+            "keys": [
+                "quickTooltip",
+                "percentAtEndOfLine",
+                "tooltipFontSize",
+                "tooltipBorderRadiusTopLeft",
+                "tooltipBorderRadiusTopRight",
+                "tooltipChangeBackgroundColor",
+                "tooltipBackgroundColor",
+                "RefreshAll_btn"
+            ]
+        },
+        "sectionTooltipCustomTranslations": {
+            "type": "section",
+            "title": "Custom translations in tooltip",
+            "keys": [
+                "tooltipCustomTranslationsLabel",
+                "tooltipCPUsUseCustomTranslation",
+                "tooltipCPUsCustomTranslation",
+                "tooltipMemoryUseCustomTranslation",
+                "tooltipMemoryCustomTranslation",
+                "tooltipSwapUseCustomTranslation",
+                "tooltipSwapCustomTranslation",
+                "tooltipNetworksUseCustomTranslation",
+                "tooltipNetworksCustomTranslation",
+                "tooltipDisksUseCustomTranslation",
+                "tooltipDisksCustomTranslation",
+                "tooltipUsageUseCustomTranslation",
+                "tooltipUsageCustomTranslation",
+                "tooltipBatteryUseCustomTranslation",
+                "tooltipBatteryCustomTranslation",
+                "emojidb_btn"
+            ]
+        },
+        "sectionSystemMonitor": {
+            "type": "section",
+            "title": "System Monitor",
+            "keys": [
+                "SysMonWhichOne",
+                "SysMonPath",
+                "SysMonMouseButton"
+            ]
+        },
+        "sectionCPUOptions": {
+            "type": "section",
+            "title": "Options",
+            "keys": [
+                "CPU_enabled",
+                "CPU_enabledTooltip",
+                "CPU_squared",
+                "CPU_width",
+                "CPU_mergeAll",
+                "CPU_groupInSetsOf4",
+                "CPU_ignoreHyperthreading",
+                "CPU_showLoadOverTime",
+                "CPU_showLoadOverTimeHowManyBars",
+                "CPU_byActivity",
+                "CPU_useProgressiveColors"
+            ]
+        },
+        "sectionCPUTemperature": {
+            "type": "section",
+            "title": "CPU Temperature",
+            "keys": [
+                "CPU_showTemp",
+                "CPU_showTempUnit",
+                "CPU_temp_hovering_only",
+                "CPU_tempInFahrenheit",
+                "CPU_tempPath",
+                "CPU_tempHigh",
+                "CPU_tempCrit",
+                "CPU_tempColor",
+                "CPU_tempColorHigh",
+                "CPU_tempColorCrit",
+                "CPU_tempCorner",
+                "CPU_tempFontFactor"
+            ]
+        },
+        "sectionCPULoadAverage": {
+            "type": "section",
+            "title": "Average Load",
+            "keys": [
+                "CPU_showLoadAverage",
+                "CPU_loadAverage_hovering_only",
+                "CPU_loadAverageHigh",
+                "CPU_loadAverageCrit",
+                "CPU_loadAverageColor",
+                "CPU_loadAverageColorHigh",
+                "CPU_loadAverageColorCrit",
+                "CPU_loadAverageCorner",
+                "CPU_loadAverageFontFactor"
+            ]
+        },
+        "sectionCPUStuckProcess": {
+            "type": "section",
+            "title": "Detection of Stuck Processes",
+            "keys": [
+                "CPU_explanationStuckProcess",
+                "CPU_alertWhenStuckProcess",
+                "CPU_stuckMethod",
+                "CPU_minLoadStuckProcess",
+                "CPU_durationStuckProcess",
+                "CPU_unitStuckProcess",
+                "CPU_bgColorStuckProcess"
+            ]
+        },
+        "sectionCPULabel": {
+            "type": "section",
+            "title": "Label",
+            "keys": [
+                "CPU_labelOn",
+                "CPU_labelForeground",
+                "CPU_labelPos",
+                "CPU_labelZoom",
+                "CPU_labelCustomized",
+                "CPU_labelCustom"
+            ],
+            "dependency": "labelsOn"
+        },
+        "sectionCPUColors": {
+            "type": "section",
+            "dependency": "!CPU_byActivity",
+            "title": "Colors",
+            "keys": [
+                "CPU_colorExplanation",
+                "CPU_color0",
+                "CPU_color1",
+                "CPU_color2",
+                "CPU_color3"
+            ]
+        },
+        "sectionCPUColorsByActivity": {
+            "type": "section",
+            "dependency": "!CPU_useProgressiveColors",
+            "title": "by activity level (in %):",
+            "keys": [
+                "CPU_activity_0_20",
+                "CPU_activity_20_40",
+                "CPU_activity_40_60",
+                "CPU_activity_60_80",
+                "CPU_activity_80_100"
+            ]
+        },
+        "sectionMemoryOptions": {
+            "type": "section",
+            "title": "Options",
+            "keys": [
+                "Mem_enabled",
+                "Mem_onlyUsedAvailable",
+                "Mem_enabledTooltip",
+                "Mem_enabledBufferCacheSharedTooltip",
+                "Swap_enabled",
+                "Swap_enabledTooltip",
+                "Swap_enabledZramTooltip",
+                "Mem_method",
+                "Mem_squared",
+                "Mem_width",
+                "Mem_chartType",
+                "Mem_startAt12Oclock",
+                "Mem_showAmountsInTooltip",
+                "Mem_showBytesInTooltip",
+                "Mem_value_display",
+                "Mem_valueCorner",
+                "percentFontFactor"
+            ]
+        },
+        "sectionMemoryLabel": {
+            "type": "section",
+            "title": "Label",
+            "keys": [
+                "Mem_labelOn",
+                "Mem_labelForeground",
+                "Mem_labelPos",
+                "Mem_labelZoom",
+                "Mem_labelCustomized",
+                "Mem_labelCustom"
+            ],
+            "dependency": "labelsOn"
+        },
+        "sectionMemoryColors": {
+            "type": "section",
+            "title": "Colors",
+            "keys": [
+                "Mem_colorUsedup",
+                "Mem_colorCache",
+                "Mem_colorBuffers",
+                "Mem_colorFree",
+                "Mem_colorSwap",
+                "Mem_swapWidth"
+            ]
+        },
+        "sectionNetworkOptions": {
+            "type": "section",
+            "title": "Options",
+            "keys": [
+                "Net_enabled",
+                "Net_squared",
+                "Net_width",
+                "Net_mergeAll",
+                "Net_typeOfGraph"
+            ]
+        },
+        "sectionNetworkLabel": {
+            "type": "section",
+            "title": "Label",
+            "keys": [
+                "Net_labelOn",
+                "Net_labelForeground",
+                "Net_labelPos",
+                "Net_labelZoom",
+                "Net_labelCustomized",
+                "Net_labelCustom"
+            ],
+            "dependency": "labelsOn"
+        },
+        "sectionNetworkScaling": {
+            "type": "section",
+            "title": "Scaling",
+            "keys": [
+                "Net_autoscale",
+                "Net_logscale",
+                "Net_minPrefix"
+            ]
+        },
+        "sectionNetworkTooltip": {
+            "type": "section",
+            "title": "Tooltip",
+            "keys": [
+                "Net_enabledTooltip",
+                "Net_symbolsInTooltip"
+            ]
+        },
+        "sectionNetworkDevices": {
+            "type": "section",
+            "title": "Devices",
+            "keys": [
+                "labelWarning",
+                "Net_getdevlist_btn",
+                "Net_devicesList",
+                "Net_cleardevlist_btn",
+                "RefreshAll_btn"
+            ]
+        },
+        "sectionNetworkTotal": {
+            "type": "section",
+            "title": "Total amount or instant speed",
+            "keys": [
+                "Net_total_type",
+                "Net_total_display",
+                "Net_total_hovering_only",
+                "Net_totalCorner",
+                "Net_total1decimal",
+                "flowFontFactor"
+            ]
+        },
+        "sectionDiskOptions": {
+            "type": "section",
+            "title": "Options",
+            "keys": [
+                "Disk_enabled",
+                "Disk_enabledTooltip",
+                "Disk_squared",
+                "Disk_width",
+                "Disk_mergeAll",
+                "Disk_typeOfGraph"
+            ]
+        },
+        "sectionDiskLabel": {
+            "type": "section",
+            "title": "Label",
+            "keys": [
+                "Disk_labelOn",
+                "Disk_labelForeground",
+                "Disk_labelPos",
+                "Disk_labelZoom",
+                "Disk_labelCustomized",
+                "Disk_labelCustom"
+            ],
+            "dependency": "labelsOn"
+        },
+        "sectionDiskScaling": {
+            "type": "section",
+            "title": "Scaling",
+            "keys": [
+                "Disk_autoscale",
+                "Disk_logscale",
+                "Disk_minPrefix"
+            ]
+        },
+        "sectionDiskTooltip": {
+            "type": "section",
+            "title": "Tooltip",
+            "keys": [
+                "Disk_symbolsInTooltip"
+            ]
+        },
+        "sectionDiskDevices": {
+            "type": "section",
+            "title": "Devices",
+            "keys": [
+                "labelWarning",
+                "Disk_getdevlist_btn",
+                "Disk_devicesList",
+                "Disk_cleardevlist_btn",
+                "RefreshAll_btn"
+            ]
+        },
+        "sectionDiskUsageOptions": {
+            "type": "section",
+            "title": "Options",
+            "keys": [
+                "DiskUsage_enabled",
+                "DiskUsage_enabledTooltip",
+                "DiskUsage_squared",
+                "DiskUsage_width",
+                "DiskUsage_mergeAll",
+                "DiskUsage_value_display",
+                "DiskUsage_valueCorner",
+                "percentFontFactor"
+            ]
+        },
+        "sectionDiskUsageLabel": {
+            "type": "section",
+            "title": "Label",
+            "keys": [
+                "DiskUsage_labelOn",
+                "DiskUsage_labelForeground",
+                "DiskUsage_labelPos",
+                "DiskUsage_labelZoom",
+                "DiskUsage_labelCustomized",
+                "DiskUsage_labelCustom"
+            ],
+            "dependency": "labelsOn"
+        },
+        "sectionDiskUsageColors": {
+            "type": "section",
+            "title": "Colors",
+            "keys": [
+                "DiskUsage_colorUsed",
+                "DiskUsage_colorFree",
+                "DiskUsage_colorAlert"
+            ]
+        },
+        "sectionDiskUsagePaths": {
+            "type": "section",
+            "title": "Paths",
+            "keys": [
+                "DiskUsage_getpathlist_btn",
+                "DiskUsage_pathList"
+            ]
+        },
+        "sectionDiskSpeed": {
+            "type": "section",
+            "title": "Instant speed",
+            "keys": [
+                "Disk_speed_display",
+                "Disk_speed_hovering_only",
+                "Disk_speedCorner",
+                "Disk_speed1decimal",
+                "flowFontFactor"
+            ]
+        },
+        "sectionBatteryOptions": {
+            "type": "section",
+            "title": "Options",
+            "keys": [
+                "Battery_enabled",
+                "Battery_enabledTooltip",
+                "Battery_squared",
+                "Battery_width",
+                "Battery_mergeAll",
+                "Battery_value_display",
+                "Battery_valueCorner",
+                "percentFontFactor"
+            ]
+        },
+        "sectionBatteryLabel": {
+            "type": "section",
+            "title": "Label",
+            "keys": [
+                "Battery_labelOn",
+                "Battery_labelForeground",
+                "Battery_labelPos",
+                "Battery_labelZoom",
+                "Battery_labelCustomized",
+                "Battery_labelCustom"
+            ],
+            "dependency": "labelsOn"
+        },
+        "sectionBatteryColors": {
+            "type": "section",
+            "title": "Colors",
+            "keys": [
+                "Battery_colorLoad",
+                "Battery_colorUnload",
+                "Battery_colorAlert"
+            ]
+        },
+        "sectionBatteryPaths": {
+            "type": "section",
+            "title": "Paths",
+            "keys": [
+                "labelWarning",
+                "Battery_getdevlist_btn",
+                "Battery_devicesList",
+                "Battery_cleardevlist_btn",
+                "RefreshAll_btn"
+            ]
+        },
+        "sectionColors": {
+            "type": "section",
+            "title": "Your colors",
+            "keys": [
+                "color0",
+                "color1",
+                "color2",
+                "color3",
+                "color4",
+                "color5",
+                "color6",
+                "color7",
+                "color8",
+                "color9",
+                "color10",
+                "color11",
+                "color12",
+                "color13",
+                "color14",
+                "color15",
+                "color16",
+                "color17",
+                "color18",
+                "color19",
+                "color20",
+                "color21",
+                "color22",
+                "color23",
+                "color24",
+                "color25",
+                "color26",
+                "color27",
+                "color28",
+                "color29",
+                "color30",
+                "color31"
+            ]
+        }
+    },
+    "labelsOn": {
+        "type": "switch",
+        "default": true,
+        "description": "Labels",
+        "value": false
+    },
+    "borderOn": {
+        "type": "switch",
+        "default": false,
+        "description": "Add a border to each graph",
+        "value": false
+    },
+    "borderRadius": {
+        "type": "scale",
+        "default": 0,
+        "min": 0,
+        "max": 25,
+        "step": 1,
+        "description": "Radius of curvature in corners",
+        "dependency": "borderOn",
+        "value": 0
+    },
+    "graphStep": {
+        "type": "combobox",
+        "default": 1,
+        "options": {
+            "1px": 1,
+            "2px": 2,
+            "4px": 4,
+            "8px": 8,
+            "16px": 16,
+            "32px": 32,
+            "64px": 64
+        },
+        "description": "The width of each graphic must be a multiple of:",
+        "value": 16
+    },
+    "graphStepApply": {
+        "type": "button",
+        "callback": "on_apply_width_multiple",
+        "description": "Apply this multiple"
+    },
+    "graphSpacing": {
+        "type": "scale",
+        "default": 1,
+        "description": "Graph spacing",
+        "min": -1,
+        "max": 10,
+        "step": 1,
+        "show-value": true,
+        "value": 1
+    },
+    "thickness": {
+        "type": "scale",
+        "default": 1,
+        "description": "Curves thickness",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "show-value": true,
+        "value": 1
+    },
+    "ledForCurves": {
+        "type": "combobox",
+        "default": "●",
+        "description": "Led for curves",
+        "options": {
+            "●": "●",
+            "⬤": "⬤",
+            "◉": "◉"
+        },
+        "value": "●"
+    },
+    "ledLocation": {
+        "type": "combobox",
+        "default": "LO",
+        "description": "Led location",
+        "options": {
+            "Left": "LO",
+            "Right": "RO"
+        },
+        "value": "LO"
+    },
+    "useIconSize": {
+        "type": "switch",
+        "default": false,
+        "description": "Limit height to the size of a colored icon",
+        "value": false
+    },
+    "graphHeightPercent": {
+        "type": "scale",
+        "default": 100,
+        "description": "Graph height (% of panel height)",
+        "min": 40,
+        "max": 100,
+        "step": 1,
+        "show-value": true,
+        "dependency": "!useIconSize",
+        "value": 100
+    },
+    "graphHeight": {
+        "type": "generic",
+        "default": 40,
+        "value": 40
+    },
+    "refreshRate": {
+        "type": "scale",
+        "default": 1250,
+        "description": "Refresh Rate (ms)",
+        "min": 100,
+        "max": 3000,
+        "step": 50,
+        "show-value": true,
+        "value": 1000
+    },
+    "labelColor": {
+        "type": "colorchooser",
+        "default": "rgba(238, 238, 236, 1)",
+        "description": "Label Color",
+        "value": "rgba(238, 238, 236, 1)"
+    },
+    "borderColor": {
+        "type": "colorchooser",
+        "default": "rgba(238, 238, 236, 1)",
+        "description": "Border Color",
+        "dependency": "borderOn",
+        "value": "rgba(238, 238, 236, 1)"
+    },
+    "backgroundColor": {
+        "type": "colorchooser",
+        "default": "rgba(48, 48, 48, 0.1)",
+        "description": "Background Color",
+        "value": "rgba(191,64,64,0)"
+    },
+    "quickTooltip": {
+        "type": "switch",
+        "default": true,
+        "description": "Show the tooltip immediately",
+        "value": false
+    },
+    "percentAtEndOfLine": {
+        "type": "switch",
+        "default": false,
+        "description": "Place % at the very end of the line",
+        "value": false
+    },
+    "tooltipFontSize": {
+        "type": "scale",
+        "default": 16,
+        "min": 8,
+        "max": 128,
+        "step": 1,
+        "description": "Font size (px)",
+        "value": 16
+    },
+    "tooltipBorderRadiusTopLeft": {
+        "type": "spinbutton",
+        "default": 5,
+        "min": 0,
+        "max": 25,
+        "step": 1,
+        "units": "px",
+        "description": "Border Radius Top-Left and Bottom-Right",
+        "value": 5
+    },
+    "tooltipBorderRadiusTopRight": {
+        "type": "spinbutton",
+        "default": 5,
+        "min": 0,
+        "max": 25,
+        "step": 1,
+        "units": "px",
+        "description": "Border Radius Top-Right and Bottom-Left",
+        "value": 5
+    },
+    "tooltipChangeBackgroundColor": {
+        "type": "switch",
+        "default": false,
+        "description": "Change Tooltip Background Color",
+        "tooltip": "Uncheck this box to use the Tooltip Background Color defined by the theme.",
+        "value": false
+    },
+    "tooltipBackgroundColor": {
+        "type": "colorchooser",
+        "default": "rgba(106, 109, 116, 0.95)",
+        "description": "Tooltip Background Color",
+        "dependency": "tooltipChangeBackgroundColor",
+        "value": "rgba(106, 109, 116, 0.95)"
+    },
+    "widthWhithoutAnyGraph": {
+        "type": "scale",
+        "default": 40,
+        "min": 20,
+        "max": 80,
+        "step": 5,
+        "description": "Width when no graph is displayed (px)",
+        "tooltip": "This is useful for preventing the tooltip from disappearing too soon when you move the pointer.\nRefresh All after making changes.",
+        "value": 40
+    },
+    "tooltipCustomTranslationsLabel": {
+        "type": "label",
+        "description": "You can use your own translations, or emojis, to replace words in the tooltip."
+    },
+    "tooltipCPUsUseCustomTranslation": {
+        "type": "switch",
+        "default": false,
+        "description": "Change translation for CPUs",
+        "value": false
+    },
+    "tooltipCPUsCustomTranslation": {
+        "type": "entry",
+        "default": "𝄜",
+        "description": "CPUs becomes:",
+        "value": "𝄜"
+    },
+    "tooltipMemoryUseCustomTranslation": {
+        "type": "switch",
+        "default": false,
+        "description": "Change translation for Memory",
+        "value": false
+    },
+    "tooltipMemoryCustomTranslation": {
+        "type": "entry",
+        "default": "𖡎",
+        "description": "Memory becomes:",
+        "value": "𖡎"
+    },
+    "tooltipSwapUseCustomTranslation": {
+        "type": "switch",
+        "default": false,
+        "description": "Change translation for Swap",
+        "value": false
+    },
+    "tooltipSwapCustomTranslation": {
+        "type": "entry",
+        "default": "⇄",
+        "description": "Swap becomes:",
+        "value": "⇄"
+    },
+    "tooltipNetworksUseCustomTranslation": {
+        "type": "switch",
+        "default": false,
+        "description": "Change translation for Networks",
+        "value": false
+    },
+    "tooltipNetworksCustomTranslation": {
+        "type": "entry",
+        "default": "🖧",
+        "description": "Networks becomes:",
+        "value": "🖧"
+    },
+    "tooltipDisksUseCustomTranslation": {
+        "type": "switch",
+        "default": false,
+        "description": "Change translation for Disks",
+        "value": false
+    },
+    "tooltipDisksCustomTranslation": {
+        "type": "entry",
+        "default": "⛁",
+        "description": "Disks becomes:",
+        "value": "⛁"
+    },
+    "tooltipUsageUseCustomTranslation": {
+        "type": "switch",
+        "default": false,
+        "description": "Change translation for Usage",
+        "value": false
+    },
+    "tooltipUsageCustomTranslation": {
+        "type": "entry",
+        "default": "⛁",
+        "description": "Usage becomes:",
+        "value": "⛁"
+    },
+    "tooltipBatteryUseCustomTranslation": {
+        "type": "switch",
+        "default": false,
+        "description": "Change translation for Battery",
+        "value": false
+    },
+    "tooltipBatteryCustomTranslation": {
+        "type": "entry",
+        "default": "🗲",
+        "description": "Battery becomes:",
+        "value": "🗲"
+    },
+    "emojidb_btn": {
+        "type": "button",
+        "description": "Open emoji database",
+        "callback": "openEmojiDB"
+    },
+    "removeEnlightenment": {
+        "type": "button",
+        "dependency": "isHighlighted",
+        "callback": "_removeEnlightenment",
+        "description": "Remove Enlightenment of this applet"
+    },
+    "displayOrderLabel": {
+        "type": "label",
+        "description": "Choose the order in which the boxes of this applet are displayed in the panel.\nDo not change these names!"
+    },
+    "displayOrder": {
+        "type": "list",
+        "default": [],
+        "columns": [
+            {
+                "id": "id",
+                "title": "Name",
+                "type": "string",
+                "expand-width": true
+            }
+        ],
+        "show-buttons": true,
+        "hidden-buttons": [
+            "+",
+            "-",
+            "edit"
+        ],
+        "description": "Display order in the panel",
+        "value": [
+            {
+                "id": "CPU"
+            },
+            {
+                "id": "MEM"
+            },
+            {
+                "id": "NET"
+            },
+            {
+                "id": "DISK"
+            },
+            {
+                "id": "DISK USAGE"
+            },
+            {
+                "id": "BATTERY"
+            }
+        ]
+    },
+    "displayOrderApply": {
+        "type": "button",
+        "description": "Apply",
+        "callback": "controlDisplayOrder"
+    },
+    "displayOrderReinit": {
+        "type": "button",
+        "description": "Reset",
+        "callback": "reinitDisplayOrder"
+    },
+    "CPU_enabled": {
+        "type": "switch",
+        "default": true,
+        "description": "Enable",
+        "value": true
+    },
+    "CPU_enabledTooltip": {
+        "type": "switch",
+        "default": true,
+        "description": "Enable Tooltip",
+        "value": false
+    },
+    "CPU_labelOn": {
+        "type": "switch",
+        "default": true,
+        "description": "Display this label",
+        "value": false
+    },
+    "CPU_labelForeground": {
+        "type": "switch",
+        "default": true,
+        "description": "Bring this label to the foreground",
+        "value": true
+    },
+    "CPU_labelPos": {
+        "type": "scale",
+        "default": 0,
+        "description": "Vertical position offset (pixels)",
+        "min": -20,
+        "max": 20,
+        "step": 1,
+        "tooltip": "Negative: to the top.\nPositive: to the bottom.",
+        "value": 0
+    },
+    "CPU_labelZoom": {
+        "type": "combobox",
+        "default": 1,
+        "description": "Label zoom",
+        "options": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4
+        },
+        "value": 1
+    },
+    "CPU_labelCustomized": {
+        "type": "switch",
+        "default": false,
+        "description": "Customize this label",
+        "value": false
+    },
+    "CPU_labelCustom": {
+        "type": "entry",
+        "default": "𝄜",
+        "description": "Custom label",
+        "tooltip": "You can use emojis.",
+        "value": "𝄜"
+    },
+    "CPU_squared": {
+        "type": "switch",
+        "default": false,
+        "description": "Square view",
+        "value": false
+    },
+    "CPU_width": {
+        "type": "scale",
+        "default": 64,
+        "description": "Width",
+        "min": 10,
+        "max": 320,
+        "step": 1,
+        "show-value": true,
+        "dependency": "!CPU_squared",
+        "value": 96
+    },
+    "CPU_mergeAll": {
+        "type": "switch",
+        "default": false,
+        "description": "Merge all",
+        "value": false
+    },
+    "CPU_groupInSetsOf4": {
+        "type": "switch",
+        "default": false,
+        "description": "Group in sets of 4 in tooltip",
+        "dependency": "!CPU_mergeAll",
+        "value": false
+    },
+    "CPU_ignoreHyperthreading": {
+        "type": "switch",
+        "default": false,
+        "description": "Ignore Hyper-Threading",
+        "dependency": "CPU_mergeAll",
+        "tooltip": "Example: An 8-core processor with Hyper-Threading technology appears to have 16 cores, even though it does not.",
+        "value": false
+    },
+    "CPU_showLoadOverTime": {
+        "type": "switch",
+        "default": false,
+        "description": "Show only the CPU Load Over Time",
+        "dependency": "CPU_mergeAll",
+        "value": false
+    },
+    "CPU_showLoadOverTimeHowManyBars": {
+        "type": "combobox",
+        "description": "How many bars?",
+        "default": 8,
+        "options": {
+            "1": 1,
+            "2": 2,
+            "4": 4,
+            "8": 8,
+            "16": 16,
+            "32": 32,
+            "64": 64
+        },
+        "tooltip": "Related to CPU Load Over Time",
+        "dependency": "CPU_mergeAll",
+        "value": 8
+    },
+    "CPU_showTemp": {
+        "type": "switch",
+        "default": true,
+        "description": "Show the CPU temperature",
+        "value": true
+    },
+    "CPU_showTempUnit": {
+        "type": "switch",
+        "default": true,
+        "description": "Display the temperature unit",
+        "dependency": "CPU_showTemp",
+        "value": true
+    },
+    "CPU_temp_hovering_only": {
+        "type": "switch",
+        "default": false,
+        "description": "Only display when hovering over this applet",
+        "dependency": "CPU_showTemp",
+        "value": false
+    },
+    "CPU_tempInFahrenheit": {
+        "type": "switch",
+        "default": false,
+        "description": "Fahrenheit degrees",
+        "dependency": "CPU_showTemp",
+        "value": false
+    },
+    "CPU_tempPath": {
+        "type": "entry",
+        "default": "/sys/class/thermal/thermal_zone1/temp",
+        "expand-width": true,
+        "description": "Path to the system file used to check the CPU temperature",
+        "value": "/sys/class/thermal/thermal_zone1/temp"
+    },
+    "CPU_tempHigh": {
+        "type": "entry",
+        "default": "65",
+        "expand-width": true,
+        "description": "High CPU Temperature (°C)",
+        "tooltip": "Refer to your CPU documentation.",
+        "value": "65"
+    },
+    "CPU_tempCrit": {
+        "type": "entry",
+        "default": "75",
+        "expand-width": true,
+        "description": "Critical CPU Temperature (°C)",
+        "tooltip": "Refer to your CPU documentation.\nMust be greater than the High CPU Temperature.",
+        "value": "75"
+    },
+    "CPU_tempCorner": {
+        "type": "combobox",
+        "default": "TR",
+        "description": "Corner in which to display the temperature",
+        "options": {
+            "Top Right": "TR",
+            "Top Left": "TL",
+            "Bottom Right": "BR",
+            "Bottom Left": "BL"
+        },
+        "value": "TR"
+    },
+    "CPU_tempFontFactor": {
+        "type": "scale",
+        "default": 33,
+        "min": 20,
+        "max": 60,
+        "step": 1,
+        "units": "%",
+        "description": "Font size: percentage of the box height",
+        "value": 33
+    },
+    "CPU_showLoadAverage": {
+        "type": "switch",
+        "default": true,
+        "description": "Show the CPU average load",
+        "value": false
+    },
+    "CPU_loadAverage_hovering_only": {
+        "type": "switch",
+        "default": false,
+        "description": "Only display when hovering over this applet",
+        "dependency": "CPU_showLoadAverage",
+        "value": false
+    },
+    "CPU_loadAverageHigh": {
+        "type": "entry",
+        "default": "75",
+        "expand-width": true,
+        "description": "High CPU Load (%)",
+        "tooltip": "Refer to your CPU documentation.",
+        "value": "75"
+    },
+    "CPU_loadAverageCrit": {
+        "type": "entry",
+        "default": "90",
+        "expand-width": true,
+        "description": "Critical CPU Load (%)",
+        "tooltip": "Refer to your CPU documentation.\nMust be greater than the High CPU Load.",
+        "value": "90"
+    },
+    "CPU_loadAverageColor": {
+        "type": "colorchooser",
+        "default": "rgba(238, 238, 236, 1)",
+        "description": "Normal Average Load Color",
+        "value": "rgba(238, 238, 236, 1)"
+    },
+    "CPU_loadAverageColorHigh": {
+        "type": "colorchooser",
+        "default": "rgba(255, 120, 0, 1)",
+        "description": "High Average Load Color",
+        "value": "rgba(255, 120, 0, 1)"
+    },
+    "CPU_loadAverageColorCrit": {
+        "type": "colorchooser",
+        "default": "rgba(224, 27, 36, 1)",
+        "description": "Critical Average Load Color",
+        "value": "rgba(224, 27, 36, 1)"
+    },
+    "CPU_loadAverageCorner": {
+        "type": "combobox",
+        "default": "TL",
+        "description": "Corner in which to display the average load",
+        "options": {
+            "Top Right": "TR",
+            "Top Left": "TL",
+            "Bottom Right": "BR",
+            "Bottom Left": "BL"
+        },
+        "value": "TL"
+    },
+    "CPU_loadAverageFontFactor": {
+        "type": "scale",
+        "default": 33,
+        "min": 20,
+        "max": 60,
+        "step": 1,
+        "units": "%",
+        "description": "Font size: percentage of the box height",
+        "value": 33
+    },
+    "CPU_explanationStuckProcess": {
+        "type": "label",
+        "description": "There are several ways to detect stuck processes:\n- through the kernel; this is reported immediately.\n- through analyzis of each CPU's activity; this is reported when at least one CPU exceeds the specified activity threshold for the set time limit.\n- through either method; the response time depends on how the stuck process was detected."
+    },
+    "CPU_alertWhenStuckProcess": {
+        "type": "switch",
+        "default": false,
+        "description": "Change the background color when at least one process is stuck",
+        "value": false
+    },
+    "CPU_stuckMethod": {
+        "type": "combobox",
+        "default": "kernel",
+        "description": "Method used to detect stuck processes",
+        "options": {
+            "Only from the kernel": "kernel",
+            "Only by checking the activity of each processor": "cpu",
+            "Both methods": "both"
+        },
+        "value": "kernel"
+    },
+    "CPU_minLoadStuckProcess": {
+        "type": "scale",
+        "units": "%",
+        "min": 10,
+        "max": 100,
+        "step": 1,
+        "default": 98,
+        "description": "Consider a process to be stuck when core's load exceeds (%)",
+        "dependency": "CPU_stuckMethod!=kernel",
+        "tooltip": "Does not concern stuck processes detected by the kernel.",
+        "value": 98
+    },
+    "CPU_durationStuckProcess": {
+        "type": "scale",
+        "min": 1,
+        "max": 60,
+        "step": 1,
+        "default": 10,
+        "description": "Consider a process to be stuck after (in Selected Unit)",
+        "dependency": "CPU_stuckMethod!=kernel",
+        "tooltip": "Does not concern stuck processes detected by the kernel.",
+        "value": 10
+    },
+    "CPU_unitStuckProcess": {
+        "type": "combobox",
+        "default": "s",
+        "description": "Selected Unit",
+        "options": {
+            "seconds": "s",
+            "minutes": "m",
+            "hours": "h"
+        },
+        "dependency": "CPU_stuckMethod!=kernel",
+        "tooltip": "Does not concern stuck processes detected by the kernel.",
+        "value": "s"
+    },
+    "CPU_bgColorStuckProcess": {
+        "type": "colorchooser",
+        "default": "rgba(238,0,0,1)",
+        "description": "Background Color when a process is stuck",
+        "value": "rgba(238,0,0,1)"
+    },
+    "CPU_tempColor": {
+        "type": "colorchooser",
+        "default": "rgba(238, 238, 236, 1)",
+        "description": "Normal Temperature Color",
+        "value": "rgba(238, 238, 236, 1)"
+    },
+    "CPU_tempColorHigh": {
+        "type": "colorchooser",
+        "default": "rgba(255, 120, 0, 1)",
+        "description": "High Temperature Color",
+        "value": "rgba(255, 120, 0, 1)"
+    },
+    "CPU_tempColorCrit": {
+        "type": "colorchooser",
+        "default": "rgba(224, 27, 36, 1)",
+        "description": "Critical Temperature Color",
+        "value": "rgba(224, 27, 36, 1)"
+    },
+    "CPU_byActivity": {
+        "type": "switch",
+        "default": false,
+        "description": "Color by activity level",
+        "value": false
+    },
+    "CPU_useProgressiveColors": {
+        "type": "switch",
+        "dependency": "CPU_byActivity",
+        "default": false,
+        "description": "Use automatic colors",
+        "value": false
+    },
+    "CPU_colorExplanation": {
+        "type": "label",
+        "description": "The CPUs are colored in groups of four: CPU0, CPU1, CPU2, and CPU3.\nThe fifth, named CPU4, will have the same color as CPU0; the sixth, CPU5, will have the same color as CPU1, and so on."
+    },
+    "CPU_color0": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 1)",
+        "description": "CPU0 Color",
+        "value": "rgb(89,195,173)"
+    },
+    "CPU_color1": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 1)",
+        "description": "CPU1 Color",
+        "value": "rgb(89,195,173)"
+    },
+    "CPU_color2": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 1)",
+        "description": "CPU2 Color",
+        "value": "rgb(89,195,173)"
+    },
+    "CPU_color3": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 1)",
+        "description": "CPU3 Color",
+        "value": "rgb(89,195,173)"
+    },
+    "CPU_activity_0_20": {
+        "type": "colorchooser",
+        "default": "rgba(26,95,180, 1)",
+        "description": "0-20",
+        "value": "rgba(26,95,180, 1)"
+    },
+    "CPU_activity_20_40": {
+        "type": "colorchooser",
+        "default": "rgba(38, 162, 105, 1)",
+        "description": "20-40",
+        "value": "rgba(38, 162, 105, 1)"
+    },
+    "CPU_activity_40_60": {
+        "type": "colorchooser",
+        "default": "rgba(229, 165, 10, 1)",
+        "description": "40-60",
+        "value": "rgba(229, 165, 10, 1)"
+    },
+    "CPU_activity_60_80": {
+        "type": "colorchooser",
+        "default": "rgba(198, 70, 0, 1)",
+        "description": "60-80",
+        "value": "rgba(198, 70, 0, 1)"
+    },
+    "CPU_activity_80_100": {
+        "type": "colorchooser",
+        "default": "rgba(165, 29, 45, 1)",
+        "description": "80-100",
+        "value": "rgba(165, 29, 45, 1)"
+    },
+    "Mem_enabled": {
+        "type": "switch",
+        "default": true,
+        "description": "Enable",
+        "value": true
+    },
+    "Mem_onlyUsedAvailable": {
+        "type": "switch",
+        "default": false,
+        "description": "Display only Used and Available memory",
+        "value": false
+    },
+    "Mem_enabledTooltip": {
+        "type": "switch",
+        "default": true,
+        "description": "Enable Tooltip",
+        "value": true
+    },
+    "Mem_enabledBufferCacheSharedTooltip": {
+        "type": "switch",
+        "default": true,
+        "description": "Enable Buffer/Cache/Shared Tooltip",
+        "dependency": "Mem_enabledTooltip",
+        "value": true
+    },
+    "Swap_enabled": {
+        "type": "switch",
+        "default": true,
+        "description": "Enable Swap",
+        "value": true
+    },
+    "Swap_enabledTooltip": {
+        "type": "switch",
+        "default": true,
+        "description": "Enable Swap Tooltip",
+        "value": true
+    },
+    "Swap_enabledZramTooltip": {
+        "type": "switch",
+        "default": true,
+        "description": "Enable ZRAM Tooltip (only shown if /dev/zram0 exists)",
+        "dependency": "Swap_enabledTooltip",
+        "value": true
+    },
+    "Mem_labelOn": {
+        "type": "switch",
+        "default": true,
+        "description": "Display this label",
+        "value": false
+    },
+    "Mem_labelForeground": {
+        "type": "switch",
+        "default": true,
+        "description": "Bring this label to the foreground",
+        "value": true
+    },
+    "Mem_labelPos": {
+        "type": "scale",
+        "default": 0,
+        "description": "Vertical position offset (pixels)",
+        "min": -20,
+        "max": 20,
+        "step": 1,
+        "tooltip": "Negative: to the top.\nPositive: to the bottom.",
+        "value": 0
+    },
+    "Mem_labelZoom": {
+        "type": "combobox",
+        "default": 1,
+        "description": "Label zoom",
+        "options": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4
+        },
+        "value": 1
+    },
+    "Mem_labelCustomized": {
+        "type": "switch",
+        "default": false,
+        "description": "Customize this label",
+        "value": false
+    },
+    "Mem_labelCustom": {
+        "type": "entry",
+        "default": "𖡎",
+        "description": "Custom label",
+        "tooltip": "You can use emojis.",
+        "value": "𖡎"
+    },
+    "Mem_chartType": {
+        "type": "combobox",
+        "default": "pie",
+        "description": "Chart Type",
+        "options": {
+            "Pie chart": "pie",
+            "Bar chart": "bar"
+        },
+        "value": "pie"
+    },
+    "Mem_method": {
+        "type": "combobox",
+        "default": "htop",
+        "description": "Memory Calculation Method",
+        "options": {
+            "htop (recommended)": "htop",
+            "Gnome System Monitor": "sysmon"
+        },
+        "value": "htop"
+    },
+    "Mem_squared": {
+        "type": "switch",
+        "default": false,
+        "description": "Square view",
+        "value": false
+    },
+    "Mem_width": {
+        "type": "scale",
+        "default": 64,
+        "description": "Width",
+        "min": 10,
+        "max": 320,
+        "step": 1,
+        "show-value": true,
+        "dependency": "!Mem_squared",
+        "value": 64
+    },
+    "Mem_startAt12Oclock": {
+        "type": "switch",
+        "default": false,
+        "description": "Origin at 12 o'clock",
+        "dependency": "Mem_chartType=pie",
+        "value": true
+    },
+    "Mem_showAmountsInTooltip": {
+        "type": "switch",
+        "default": true,
+        "description": "Show Memory/Swap byte amounts (Total, Used, Available) in the tooltip",
+        "value": false
+    },
+    "Mem_showBytesInTooltip": {
+        "type": "switch",
+        "default": true,
+        "description": "Tooltip Memory/Swap amounts: ON = SI units (kB, MB, GB); OFF = IEC binary units (KiB, MiB, GiB)",
+        "dependency": "Mem_showAmountsInTooltip",
+        "value": true
+    },
+    "Mem_value_display": {
+        "type": "combobox",
+        "default": "hover",
+        "description": "Display memory usage percentage",
+        "options": {
+            "None": "none",
+            "Hovering over": "hover",
+            "Always": "always"
+        },
+        "value": "none"
+    },
+    "Mem_valueCorner": {
+        "type": "combobox",
+        "default": "B",
+        "description": "Where to display this",
+        "options": {
+            "Top": "T",
+            "Bottom": "B"
+        },
+        "dependency": "Mem_value_display!=none",
+        "value": "B"
+    },
+    "Mem_colorUsedup": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 1)",
+        "description": "Usedup",
+        "value": "rgb(89,195,173)"
+    },
+    "Mem_colorCache": {
+        "type": "colorchooser",
+        "default": "rgba(148, 114, 219, 1)",
+        "description": "Cache",
+        "dependency": "!Mem_onlyUsedAvailable",
+        "value": "rgba(191,64,64,0)"
+    },
+    "Mem_colorBuffers": {
+        "type": "colorchooser",
+        "default": "rgba(254, 140, 2, 1)",
+        "description": "Buffers",
+        "dependency": "!Mem_onlyUsedAvailable",
+        "value": "rgba(191,64,64,0)"
+    },
+    "Mem_colorFree": {
+        "type": "colorchooser",
+        "default": "rgba(230, 230, 230, 0.1)",
+        "description": "Free",
+        "value": "rgba(191,64,64,0)"
+    },
+    "Mem_colorSwap": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.15)",
+        "description": "Swap",
+        "value": "rgba(191,64,64,0)"
+    },
+    "Mem_swapWidth": {
+        "type": "combobox",
+        "default": 100,
+        "description": "Relative width for Swap graph",
+        "options": {
+            "100%": 100,
+            "25%, left side": 25,
+            "50%, left side": 50,
+            "None": 0
+        },
+        "tooltip": "100%: The Swap graph is a bar that spans the entire width of the graph, behind the circle.\n10%: The Swap graph is a bar that occupies 10% of the graph width, to the left of the circle.\nNone: No Swap bar.",
+        "value": 100
+    },
+    "Net_enabled": {
+        "type": "switch",
+        "default": true,
+        "description": "Enable",
+        "value": false
+    },
+    "Net_enabledTooltip": {
+        "type": "switch",
+        "default": true,
+        "description": "Enable Tooltip",
+        "value": true
+    },
+    "Net_labelOn": {
+        "type": "switch",
+        "default": true,
+        "description": "Display this label",
+        "value": true
+    },
+    "Net_labelForeground": {
+        "type": "switch",
+        "default": true,
+        "description": "Bring this label to the foreground",
+        "value": true
+    },
+    "Net_labelPos": {
+        "type": "scale",
+        "default": 0,
+        "description": "Vertical position offset (pixels)",
+        "min": -20,
+        "max": 20,
+        "step": 1,
+        "tooltip": "Negative: to the top.\nPositive: to the bottom.",
+        "value": 0
+    },
+    "Net_labelZoom": {
+        "type": "combobox",
+        "default": 1,
+        "description": "Label zoom",
+        "options": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4
+        },
+        "value": 1
+    },
+    "Net_labelCustomized": {
+        "type": "switch",
+        "default": false,
+        "description": "Customize this label",
+        "value": false
+    },
+    "Net_labelCustom": {
+        "type": "entry",
+        "default": "🖧",
+        "description": "Custom label",
+        "tooltip": "You can use emojis.",
+        "value": "🖧"
+    },
+    "Net_squared": {
+        "type": "switch",
+        "default": false,
+        "description": "Square view",
+        "value": false
+    },
+    "Net_width": {
+        "type": "scale",
+        "default": 64,
+        "description": "Width",
+        "min": 10,
+        "max": 320,
+        "step": 1,
+        "show-value": true,
+        "dependency": "!Net_squared",
+        "value": 64
+    },
+    "Net_mergeAll": {
+        "type": "switch",
+        "default": false,
+        "description": "Merge all",
+        "value": false
+    },
+    "Net_typeOfGraph": {
+        "type": "combobox",
+        "default": "graphled",
+        "description": "Type of graph",
+        "options": {
+            "None": "none",
+            "Curves only": "graph",
+            "Led only": "led",
+            "Curves and Led": "graphled"
+        },
+        "value": "graphled"
+    },
+    "Net_autoscale": {
+        "type": "switch",
+        "default": true,
+        "description": "Auto Scale",
+        "value": true
+    },
+    "Net_logscale": {
+        "type": "switch",
+        "default": true,
+        "description": "Logarithmic",
+        "value": true
+    },
+    "Net_minPrefix": {
+        "type": "combobox",
+        "default": "B",
+        "description": "Minimal prefix",
+        "options": {
+            "Byte": "B",
+            "kilo": "K",
+            "Mega": "M",
+            "Giga": "G",
+            "Tera": "T",
+            "Peta": "P",
+            "Exa": "E",
+            "Zetta": "Z",
+            "Yotta": "Y"
+        },
+        "tooltip": "You can specify the minimum unit of measurement of your choice for the amount of data transferred: byte, kilobyte, megabyte, etc.",
+        "value": "B"
+    },
+    "Net_symbolsInTooltip": {
+        "type": "switch",
+        "default": false,
+        "description": "Use symbols instead of words",
+        "value": false
+    },
+    "Net_getdevlist_btn": {
+        "type": "button",
+        "description": "Update this device list",
+        "callback": "on_Net_getdevlist_btn_clicked"
+    },
+    "Net_devicesList": {
+        "type": "list",
+        "default": [],
+        "columns": [
+            {
+                "id": "enabled",
+                "title": "Enabled",
+                "type": "boolean",
+                "default": true,
+                "align": 0.5
+            },
+            {
+                "id": "id",
+                "title": "⚠️ Id️",
+                "type": "string",
+                "default": "",
+                "expand-width": true
+            },
+            {
+                "id": "name",
+                "title": "Name",
+                "type": "string",
+                "default": "",
+                "expand-width": true
+            },
+            {
+                "id": "colorDown",
+                "title": "Color Down",
+                "type": "integer",
+                "default": 0,
+                "options": {
+                    "#0": 0,
+                    "#1": 1,
+                    "#2": 2,
+                    "#3": 3,
+                    "#4": 4,
+                    "#5": 5,
+                    "#6": 6,
+                    "#7": 7,
+                    "#8": 8,
+                    "#9": 9,
+                    "#10": 10,
+                    "#11": 11,
+                    "#12": 12,
+                    "#13": 13,
+                    "#14": 14,
+                    "#15": 15,
+                    "#16": 16,
+                    "#17": 17,
+                    "#18": 18,
+                    "#19": 19,
+                    "#20": 20,
+                    "#21": 21,
+                    "#22": 22,
+                    "#23": 23,
+                    "#24": 24,
+                    "#25": 25,
+                    "#26": 26,
+                    "#27": 27,
+                    "#28": 28,
+                    "#29": 29,
+                    "#30": 30,
+                    "#31": 31
+                },
+                "align": 0.5
+            },
+            {
+                "id": "colorUp",
+                "title": "Color Up",
+                "type": "integer",
+                "default": 1,
+                "options": {
+                    "#0": 0,
+                    "#1": 1,
+                    "#2": 2,
+                    "#3": 3,
+                    "#4": 4,
+                    "#5": 5,
+                    "#6": 6,
+                    "#7": 7,
+                    "#8": 8,
+                    "#9": 9,
+                    "#10": 10,
+                    "#11": 11,
+                    "#12": 12,
+                    "#13": 13,
+                    "#14": 14,
+                    "#15": 15,
+                    "#16": 16,
+                    "#17": 17,
+                    "#18": 18,
+                    "#19": 19,
+                    "#20": 20,
+                    "#21": 21,
+                    "#22": 22,
+                    "#23": 23,
+                    "#24": 24,
+                    "#25": 25,
+                    "#26": 26,
+                    "#27": 27,
+                    "#28": 28,
+                    "#29": 29,
+                    "#30": 30,
+                    "#31": 31
+                },
+                "align": 0.5
+            },
+            {
+                "id": "inTotal",
+                "title": "Part of total",
+                "type": "boolean",
+                "default": false,
+                "align": 0.5
+            }
+        ],
+        "show-buttons": true,
+        "value": [
+            {
+                "enabled": true,
+                "id": "enp14s0",
+                "name": "enp14s0",
+                "colorDown": 0,
+                "colorUp": 1
+            },
+            {
+                "enabled": true,
+                "id": "virbr0",
+                "name": "virbr0",
+                "colorDown": 2,
+                "colorUp": 3
+            },
+            {
+                "enabled": false,
+                "id": "wlp15s0",
+                "name": "wlp15s0",
+                "colorDown": 4,
+                "colorUp": 5
+            }
+        ]
+    },
+    "Net_cleardevlist_btn": {
+        "type": "button",
+        "description": "Clear this device list",
+        "callback": "on_Net_cleardevlist_btn_clicked"
+    },
+    "Net_total_type": {
+        "type": "combobox",
+        "description": "Total amount or speed",
+        "default": "amount",
+        "options": {
+            "Total transfer amount (Bytes)": "amount",
+            "Instant network speed (Bytes per second)": "speed"
+        },
+        "value": "amount"
+    },
+    "Net_total_display": {
+        "type": "switch",
+        "default": true,
+        "description": "Display that",
+        "tooltip": "Be sure to check at least one “Part of total” box among the enabled devices.",
+        "value": true
+    },
+    "Net_total_hovering_only": {
+        "type": "switch",
+        "default": false,
+        "description": "Only display when hovering over this applet",
+        "dependency": "Net_total_display",
+        "value": false
+    },
+    "Net_totalCorner": {
+        "type": "combobox",
+        "default": "LO",
+        "description": "Corner in which to display that",
+        "options": {
+            "Top Right": "TR",
+            "Top Left": "TL",
+            "Bottom Right": "BR",
+            "Bottom Left": "BL",
+            "Right Only": "RO",
+            "Left Only": "LO"
+        },
+        "value": "LO"
+    },
+    "Disk_enabled": {
+        "type": "switch",
+        "default": true,
+        "description": "Enable",
+        "value": false
+    },
+    "Disk_enabledTooltip": {
+        "type": "switch",
+        "default": true,
+        "description": "Enable Tooltip",
+        "value": true
+    },
+    "Disk_labelOn": {
+        "type": "switch",
+        "default": true,
+        "description": "Display this label",
+        "value": true
+    },
+    "Disk_labelForeground": {
+        "type": "switch",
+        "default": true,
+        "description": "Bring this label to the foreground",
+        "value": true
+    },
+    "Disk_labelPos": {
+        "type": "scale",
+        "default": 0,
+        "description": "Vertical position offset (pixels)",
+        "min": -20,
+        "max": 20,
+        "step": 1,
+        "tooltip": "Negative: to the top.\nPositive: to the bottom.",
+        "value": 0
+    },
+    "Disk_labelZoom": {
+        "type": "combobox",
+        "default": 1,
+        "description": "Label zoom",
+        "options": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4
+        },
+        "value": 1
+    },
+    "Disk_labelCustomized": {
+        "type": "switch",
+        "default": false,
+        "description": "Customize this label",
+        "value": false
+    },
+    "Disk_labelCustom": {
+        "type": "entry",
+        "default": "⛁",
+        "description": "Custom label",
+        "tooltip": "You can use emojis.",
+        "value": "⛁"
+    },
+    "Disk_squared": {
+        "type": "switch",
+        "default": false,
+        "description": "Square view",
+        "value": false
+    },
+    "Disk_width": {
+        "type": "scale",
+        "default": 64,
+        "description": "Width",
+        "min": 10,
+        "max": 320,
+        "step": 1,
+        "show-value": true,
+        "dependency": "!Disk_squared",
+        "value": 64
+    },
+    "Disk_mergeAll": {
+        "type": "switch",
+        "default": false,
+        "description": "Merge all",
+        "value": false
+    },
+    "Disk_typeOfGraph": {
+        "type": "combobox",
+        "default": "graphled",
+        "description": "Type of graph",
+        "options": {
+            "None": "none",
+            "Curves only": "graph",
+            "Led only": "led",
+            "Curves and Led": "graphled"
+        },
+        "value": "graphled"
+    },
+    "Disk_autoscale": {
+        "type": "switch",
+        "default": true,
+        "description": "Auto Scale",
+        "value": true
+    },
+    "Disk_logscale": {
+        "type": "switch",
+        "default": true,
+        "description": "Logarithmic",
+        "value": true
+    },
+    "Disk_minPrefix": {
+        "type": "combobox",
+        "default": "B",
+        "description": "Minimal prefix",
+        "options": {
+            "Byte": "B",
+            "kilo": "K",
+            "Mega": "M",
+            "Giga": "G",
+            "Tera": "T",
+            "Peta": "P",
+            "Exa": "E",
+            "Zetta": "Z",
+            "Yotta": "Y"
+        },
+        "tooltip": "You can specify the minimum unit of measurement of your choice for the amount of data transferred: byte, kilobyte, megabyte, etc.",
+        "value": "B"
+    },
+    "Disk_symbolsInTooltip": {
+        "type": "switch",
+        "default": false,
+        "description": "Use symbols instead of words",
+        "value": false
+    },
+    "Disk_getdevlist_btn": {
+        "type": "button",
+        "description": "Update this device list",
+        "callback": "on_Disk_getdevlist_btn_clicked"
+    },
+    "Disk_devicesList": {
+        "type": "list",
+        "default": [],
+        "columns": [
+            {
+                "id": "enabled",
+                "title": "Enabled",
+                "type": "boolean",
+                "default": true,
+                "align": 0.5
+            },
+            {
+                "id": "id",
+                "title": "⚠️ Id",
+                "type": "string",
+                "default": "",
+                "expand-width": true
+            },
+            {
+                "id": "name",
+                "title": "Name",
+                "type": "string",
+                "default": "",
+                "expand-width": true
+            },
+            {
+                "id": "discGran",
+                "title": "⚠️ Sector Size",
+                "type": "integer",
+                "default": 512,
+                "options": {
+                    "512": 512,
+                    "1024": 1024,
+                    "2048": 2048,
+                    "4096": 4096,
+                    "8192": 8192,
+                    "16384": 16384,
+                    "32768": 32768,
+                    "65536": 65536,
+                    "131072": 131072
+                },
+                "align": 0.5
+            },
+            {
+                "id": "colorRead",
+                "title": "Color Read",
+                "type": "integer",
+                "default": 0,
+                "options": {
+                    "#0": 0,
+                    "#1": 1,
+                    "#2": 2,
+                    "#3": 3,
+                    "#4": 4,
+                    "#5": 5,
+                    "#6": 6,
+                    "#7": 7,
+                    "#8": 8,
+                    "#9": 9,
+                    "#10": 10,
+                    "#11": 11,
+                    "#12": 12,
+                    "#13": 13,
+                    "#14": 14,
+                    "#15": 15,
+                    "#16": 16,
+                    "#17": 17,
+                    "#18": 18,
+                    "#19": 19,
+                    "#20": 20,
+                    "#21": 21,
+                    "#22": 22,
+                    "#23": 23,
+                    "#24": 24,
+                    "#25": 25,
+                    "#26": 26,
+                    "#27": 27,
+                    "#28": 28,
+                    "#29": 29,
+                    "#30": 30,
+                    "#31": 31
+                },
+                "align": 0.5
+            },
+            {
+                "id": "colorWrite",
+                "title": "Color Write",
+                "type": "integer",
+                "default": 1,
+                "options": {
+                    "#0": 0,
+                    "#1": 1,
+                    "#2": 2,
+                    "#3": 3,
+                    "#4": 4,
+                    "#5": 5,
+                    "#6": 6,
+                    "#7": 7,
+                    "#8": 8,
+                    "#9": 9,
+                    "#10": 10,
+                    "#11": 11,
+                    "#12": 12,
+                    "#13": 13,
+                    "#14": 14,
+                    "#15": 15,
+                    "#16": 16,
+                    "#17": 17,
+                    "#18": 18,
+                    "#19": 19,
+                    "#20": 20,
+                    "#21": 21,
+                    "#22": 22,
+                    "#23": 23,
+                    "#24": 24,
+                    "#25": 25,
+                    "#26": 26,
+                    "#27": 27,
+                    "#28": 28,
+                    "#29": 29,
+                    "#30": 30,
+                    "#31": 31
+                },
+                "align": 0.5
+            }
+        ],
+        "show-buttons": true,
+        "value": [
+            {
+                "enabled": true,
+                "id": "sda1",
+                "name": "1tb-ssd-1",
+                "discGran": 512,
+                "colorRead": 0,
+                "colorWrite": 1
+            },
+            {
+                "enabled": true,
+                "id": "sdb1",
+                "name": "2tb-hdd-1",
+                "discGran": 4096,
+                "colorRead": 2,
+                "colorWrite": 3
+            },
+            {
+                "enabled": true,
+                "id": "sdc1",
+                "name": "2tb-hdd-2",
+                "discGran": 4096,
+                "colorRead": 4,
+                "colorWrite": 5
+            },
+            {
+                "enabled": true,
+                "id": "sdd1",
+                "name": "2tb-hdd-3",
+                "discGran": 4096,
+                "colorRead": 6,
+                "colorWrite": 7
+            },
+            {
+                "enabled": true,
+                "id": "sde1",
+                "name": "timeshift",
+                "discGran": 512,
+                "colorRead": 8,
+                "colorWrite": 9
+            },
+            {
+                "enabled": true,
+                "id": "nvme0n1p1",
+                "name": "efi",
+                "discGran": 512,
+                "colorRead": 10,
+                "colorWrite": 11
+            },
+            {
+                "enabled": true,
+                "id": "nvme0n1p2",
+                "name": "root",
+                "discGran": 512,
+                "colorRead": 12,
+                "colorWrite": 13
+            },
+            {
+                "enabled": true,
+                "id": "nvme0n1p3",
+                "name": "nvme",
+                "discGran": 512,
+                "colorRead": 14,
+                "colorWrite": 15
+            }
+        ]
+    },
+    "Disk_cleardevlist_btn": {
+        "type": "button",
+        "description": "Clear this device list",
+        "callback": "on_Disk_cleardevlist_btn_clicked"
+    },
+    "Disk_speed_display": {
+        "type": "switch",
+        "default": true,
+        "description": "Display that",
+        "tooltip": "Be sure to check at least one “Part of total” box among the enabled devices.",
+        "value": true
+    },
+    "Disk_speed_hovering_only": {
+        "type": "switch",
+        "default": false,
+        "description": "Only display when hovering over this applet",
+        "dependency": "Disk_speed_display",
+        "value": false
+    },
+    "Disk_speedCorner": {
+        "type": "combobox",
+        "default": "LO",
+        "description": "Corner in which to display that",
+        "options": {
+            "Top Right": "TR",
+            "Top Left": "TL",
+            "Bottom Right": "BR",
+            "Bottom Left": "BL",
+            "Right Only": "RO",
+            "Left Only": "LO"
+        },
+        "value": "LO"
+    },
+    "DiskUsage_enabled": {
+        "type": "switch",
+        "default": false,
+        "description": "Enable",
+        "value": false
+    },
+    "DiskUsage_enabledTooltip": {
+        "type": "switch",
+        "default": false,
+        "description": "Enable Tooltip",
+        "value": false
+    },
+    "DiskUsage_labelOn": {
+        "type": "switch",
+        "default": true,
+        "description": "Display this label",
+        "value": true
+    },
+    "DiskUsage_labelForeground": {
+        "type": "switch",
+        "default": true,
+        "description": "Bring this label to the foreground",
+        "value": true
+    },
+    "DiskUsage_labelPos": {
+        "type": "scale",
+        "default": 0,
+        "description": "Vertical position offset (pixels)",
+        "min": -20,
+        "max": 20,
+        "step": 1,
+        "tooltip": "Negative: to the top.\nPositive: to the bottom.",
+        "value": 0
+    },
+    "DiskUsage_labelZoom": {
+        "type": "combobox",
+        "default": 1,
+        "description": "Label zoom",
+        "options": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4
+        },
+        "value": 1
+    },
+    "DiskUsage_labelCustomized": {
+        "type": "switch",
+        "default": false,
+        "description": "Customize this label",
+        "value": false
+    },
+    "DiskUsage_labelCustom": {
+        "type": "entry",
+        "default": "⛃",
+        "description": "Custom label",
+        "tooltip": "You can use emojis.",
+        "value": "⛃"
+    },
+    "DiskUsage_squared": {
+        "type": "switch",
+        "default": false,
+        "description": "Square view",
+        "value": false
+    },
+    "DiskUsage_width": {
+        "type": "scale",
+        "default": 32,
+        "description": "Width",
+        "min": 10,
+        "max": 320,
+        "step": 1,
+        "show-value": true,
+        "dependency": "!DiskUsage_squared",
+        "value": 64
+    },
+    "DiskUsage_mergeAll": {
+        "type": "switch",
+        "default": false,
+        "description": "Merge all",
+        "value": false
+    },
+    "DiskUsage_value_display": {
+        "type": "combobox",
+        "default": "hover",
+        "description": "Display value",
+        "options": {
+            "None": "none",
+            "Hovering over": "hover",
+            "Always": "always"
+        },
+        "value": "hover"
+    },
+    "DiskUsage_valueCorner": {
+        "type": "combobox",
+        "default": "B",
+        "description": "Where to display this",
+        "options": {
+            "Top": "T",
+            "Bottom": "B"
+        },
+        "dependency": "DiskUsage_value_display!=none",
+        "value": "B"
+    },
+    "DiskUsage_colorUsed": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 1)",
+        "description": "Usedup",
+        "value": "rgba(255, 255, 255, 1)"
+    },
+    "DiskUsage_colorFree": {
+        "type": "colorchooser",
+        "default": "rgba(230, 230, 230, 0.1)",
+        "description": "Free",
+        "value": "rgba(230, 230, 230, 0.1)"
+    },
+    "DiskUsage_colorAlert": {
+        "type": "colorchooser",
+        "default": "rgba(255, 0, 0, 1)",
+        "description": "Alert",
+        "value": "rgba(255, 0, 0, 1)"
+    },
+    "DiskUsage_getpathlist_btn": {
+        "type": "button",
+        "description": "Update this path list",
+        "callback": "on_DiskUsage_getpathlist_btn_clicked"
+    },
+    "DiskUsage_pathList": {
+        "type": "list",
+        "default": [],
+        "columns": [
+            {
+                "id": "enabled",
+                "title": "Enabled",
+                "type": "boolean",
+                "default": true,
+                "align": 0.5
+            },
+            {
+                "id": "maxvalue",
+                "title": "Alert when\nvalue (in %)\nreaches",
+                "type": "integer",
+                "default": 80,
+                "min": 0,
+                "max": 100,
+                "align": 0.5
+            },
+            {
+                "id": "name",
+                "title": "Name",
+                "type": "string",
+                "default": "",
+                "expand-width": true
+            },
+            {
+                "id": "path",
+                "title": "Path",
+                "type": "string",
+                "default": "",
+                "expand-width": true
+            }
+        ],
+        "show-buttons": true,
+        "value": [
+            {
+                "enabled": true,
+                "maxvalue": 80,
+                "name": "1tb-ssd-1",
+                "path": "/mnt/1tb-ssd-1"
+            },
+            {
+                "enabled": true,
+                "maxvalue": 80,
+                "name": "2tb-hdd-1",
+                "path": "/mnt/2tb-hdd-1"
+            },
+            {
+                "enabled": true,
+                "maxvalue": 80,
+                "name": "2tb-hdd-2",
+                "path": "/mnt/2tb-hdd-2"
+            },
+            {
+                "enabled": true,
+                "maxvalue": 80,
+                "name": "2tb-hdd-3",
+                "path": "/mnt/2tb-hdd-3"
+            },
+            {
+                "enabled": true,
+                "maxvalue": 80,
+                "name": "timeshift",
+                "path": "/mnt/timeshift"
+            },
+            {
+                "enabled": true,
+                "maxvalue": 80,
+                "name": "efi",
+                "path": "/boot/efi"
+            },
+            {
+                "enabled": true,
+                "maxvalue": 80,
+                "name": "root",
+                "path": "/"
+            },
+            {
+                "enabled": true,
+                "maxvalue": 80,
+                "name": "nvme",
+                "path": "/mnt/nvme"
+            }
+        ]
+    },
+    "Battery_enabled": {
+        "type": "switch",
+        "default": false,
+        "description": "Enable",
+        "value": false
+    },
+    "Battery_enabledTooltip": {
+        "type": "switch",
+        "default": false,
+        "description": "Enable Tooltip",
+        "value": false
+    },
+    "Battery_labelOn": {
+        "type": "switch",
+        "default": true,
+        "description": "Display this label",
+        "value": true
+    },
+    "Battery_labelForeground": {
+        "type": "switch",
+        "default": true,
+        "description": "Bring this label to the foreground",
+        "value": true
+    },
+    "Battery_labelPos": {
+        "type": "scale",
+        "default": 0,
+        "description": "Vertical position offset (pixels)",
+        "min": -20,
+        "max": 20,
+        "step": 1,
+        "tooltip": "Negative: to the top.\nPositive: to the bottom.",
+        "value": 0
+    },
+    "Battery_labelZoom": {
+        "type": "combobox",
+        "default": 1,
+        "description": "Label zoom",
+        "options": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4
+        },
+        "value": 1
+    },
+    "Battery_labelCustomized": {
+        "type": "switch",
+        "default": false,
+        "description": "Customize this label",
+        "value": false
+    },
+    "Battery_labelCustom": {
+        "type": "entry",
+        "default": "🗲",
+        "description": "Custom label",
+        "tooltip": "You can use emojis.",
+        "value": "🗲"
+    },
+    "Battery_squared": {
+        "type": "switch",
+        "default": false,
+        "description": "Square view",
+        "value": false
+    },
+    "Battery_width": {
+        "type": "scale",
+        "default": 32,
+        "description": "Width",
+        "min": 10,
+        "max": 320,
+        "step": 1,
+        "show-value": true,
+        "dependency": "!Battery_squared",
+        "value": 32
+    },
+    "Battery_mergeAll": {
+        "type": "switch",
+        "default": false,
+        "description": "Merge all",
+        "value": false
+    },
+    "Battery_value_display": {
+        "type": "combobox",
+        "default": "hover",
+        "description": "Display value",
+        "options": {
+            "None": "none",
+            "Hovering over": "hover",
+            "Always": "always"
+        },
+        "value": "hover"
+    },
+    "Battery_valueCorner": {
+        "type": "combobox",
+        "default": "B",
+        "description": "Where to display this",
+        "options": {
+            "Top": "T",
+            "Bottom": "B"
+        },
+        "dependency": "Battery_value_display!=none",
+        "value": "B"
+    },
+    "Battery_colorLoad": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 1)",
+        "description": "Load",
+        "value": "rgba(255, 255, 255, 1)"
+    },
+    "Battery_colorUnload": {
+        "type": "colorchooser",
+        "default": "rgba(230, 230, 230, 0.1)",
+        "description": "Unload",
+        "value": "rgba(230, 230, 230, 0.1)"
+    },
+    "Battery_colorAlert": {
+        "type": "colorchooser",
+        "default": "rgba(255, 0, 0, 1)",
+        "description": "Alert",
+        "value": "rgba(255, 0, 0, 1)"
+    },
+    "Battery_getdevlist_btn": {
+        "type": "button",
+        "description": "Update this device list",
+        "callback": "on_Battery_getdevlist_btn_clicked"
+    },
+    "Battery_devicesList": {
+        "type": "list",
+        "default": [],
+        "columns": [
+            {
+                "id": "enabled",
+                "title": "Enabled",
+                "type": "boolean",
+                "default": true,
+                "align": 0.5
+            },
+            {
+                "id": "id",
+                "title": "⚠️ Id️",
+                "type": "string",
+                "default": "",
+                "expand-width": true
+            },
+            {
+                "id": "minvalue",
+                "title": "Alert when\nvalue (in %)\nreaches",
+                "type": "integer",
+                "default": 40,
+                "min": 0,
+                "max": 100,
+                "align": 0.5
+            },
+            {
+                "id": "name",
+                "title": "Name",
+                "type": "string",
+                "default": "",
+                "expand-width": true
+            }
+        ],
+        "show-buttons": true,
+        "value": [
+            {
+                "enabled": true,
+                "id": "sony_controller_battery_04:98:f3:c4:94:3d",
+                "minvalue": 40,
+                "name": "sony_controller_battery_04:98:f3:c4:94:3d"
+            }
+        ]
+    },
+    "Battery_cleardevlist_btn": {
+        "type": "button",
+        "description": "Clear this device list",
+        "callback": "on_Battery_cleardevlist_btn_clicked"
+    },
+    "percentFontFactor": {
+        "type": "scale",
+        "default": 33,
+        "min": 20,
+        "max": 60,
+        "step": 1,
+        "units": "%",
+        "description": "Font size: percentage of the box height",
+        "value": 33
+    },
+    "Net_total1decimal": {
+        "type": "switch",
+        "default": false,
+        "description": "Show 1 decimal",
+        "value": false
+    },
+    "Disk_speed1decimal": {
+        "type": "switch",
+        "default": false,
+        "description": "Show 1 decimal",
+        "value": false
+    },
+    "flowFontFactor": {
+        "type": "scale",
+        "default": 33,
+        "min": 20,
+        "max": 60,
+        "step": 1,
+        "units": "%",
+        "description": "Font size: percentage of the box height",
+        "value": 40
+    },
+    "color0": {
+        "type": "colorchooser",
+        "default": "rgba(0,255,0,0.5)",
+        "description": "Color #0",
+        "value": "rgba(0,255,0,0.5)"
+    },
+    "color1": {
+        "type": "colorchooser",
+        "default": "rgba(255,0,0,0.5)",
+        "description": "Color #1",
+        "value": "rgba(255,0,0,0.5)"
+    },
+    "color2": {
+        "type": "colorchooser",
+        "default": "rgba(0,0,255,0.5)",
+        "description": "Color #2",
+        "value": "rgba(0,0,255,0.5)"
+    },
+    "color3": {
+        "type": "colorchooser",
+        "default": "rgba(255,127,0,0.5)",
+        "description": "Color #3",
+        "value": "rgba(255,127,0,0.5)"
+    },
+    "color4": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #4",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color5": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #5",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color6": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #6",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color7": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #7",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color8": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #8",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color9": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #9",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color10": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #10",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color11": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #11",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color12": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #12",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color13": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #13",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color14": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #14",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color15": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #15",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color16": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #16",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color17": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #17",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color18": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #18",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color19": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #19",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color20": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #20",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color21": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #21",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color22": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #22",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color23": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #23",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color24": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #24",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color25": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #25",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color26": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #26",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color27": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #27",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color28": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #28",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color29": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #29",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color30": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #30",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "color31": {
+        "type": "colorchooser",
+        "default": "rgba(255, 255, 255, 0.1)",
+        "description": "Color #31",
+        "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "labelWarning": {
+        "type": "label",
+        "description": "Data marked with ⚠️ must not be changed!"
+    },
+    "RefreshAll_btn": {
+        "type": "button",
+        "description": "Refresh All",
+        "callback": "refreshAll"
+    },
+    "SysMonWhichOne": {
+        "type": "combobox",
+        "default": "gnome",
+        "description": "Which System Monitor",
+        "options": {
+            "System Default": "sysdefault",
+            "Gnome System Monitor": "gnome",
+            "Custom": "customized"
+        },
+        "value": "gnome"
+    },
+    "SysMonPath": {
+        "type": "entry",
+        "default": "gnome-system-monitor.desktop",
+        "description": "Complete name of a .desktop file or a flatpak id",
+        "dependency": "SysMonWhichOne=customized",
+        "expand-width": true,
+        "tooltip": "EXAMPLES:\ngnome-system-monitor.desktop\norg.gnome.SystemMonitor.desktop\nio.github.hakandundar34coding.system-monitoring-center",
+        "value": "gnome-system-monitor.desktop"
+    },
+    "SysMonMouseButton": {
+        "type": "combobox",
+        "default": "left",
+        "description": "Which mouse button opens your System Monitor",
+        "options": {
+            "Left": "left",
+            "Middle": "middle",
+            "Both": "both"
+        },
+        "value": "left"
+    },
+    "isHighlighted": {
+        "type": "generic",
+        "default": false,
+        "value": false
+    },
+    "__md5__": "ed6d412fbf67bdbc5ad55e39720b0a97"
+}
