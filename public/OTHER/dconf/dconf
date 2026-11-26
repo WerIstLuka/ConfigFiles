@@ -8,9 +8,9 @@ show-welcome-page=false
 alttab-switcher-delay=100
 alttab-switcher-style='icons+thumbnails'
 desklet-snap-interval=25
-enabled-applets=['panel1:right:0:xapp-status@cinnamon.org:4', 'panel1:right:5:network@cinnamon.org:10', 'panel1:right:6:sound@cinnamon.org:11', 'panel1:right:7:calendar@cinnamon.org:13', 'panel1:left:2:spacer@cinnamon.org:19', 'panel1:center:0:grouped-window-list@cinnamon.org:25', 'panel1:left:0:LukaMenu@luka:73', 'panel1:left:3:gpumonitor@axel358:80', 'panel1:right:2:multicore-sys-monitor@ccadeptic23:82', 'panel1:right:1:cpu-monitor-text@gnemonix:83', 'panel1:right:4:mem-monitor-text@datanom.net:84']
+enabled-applets=['panel1:left:5:xapp-status@cinnamon.org:4', 'panel1:right:7:network@cinnamon.org:10', 'panel1:right:8:sound@cinnamon.org:11', 'panel1:right:9:calendar@cinnamon.org:13', 'panel1:left:1:spacer@cinnamon.org:19', 'panel1:center:0:grouped-window-list@cinnamon.org:25', 'panel1:left:0:LukaMenu@luka:73', 'panel1:left:2:gpumonitor@axel358:80', 'panel1:right:5:multicore-sys-monitor@ccadeptic23:82', 'panel1:right:4:cpu-monitor-text@gnemonix:83', 'panel1:right:6:mem-monitor-text@datanom.net:84', 'panel1:left:4:spacer@cinnamon.org:89']
 enabled-desklets=@as []
-enabled-extensions=['compiz-windows-effect@hermes83.github.com', 'BlurCinnamon@klangman', 'transparent-panels@germanfr', 'opacity-slider@neatnit', 'opacify@anish.org', 'user-shadows@nathan818fr']
+enabled-extensions=['compiz-windows-effect@hermes83.github.com', 'opacity-slider@neatnit', 'opacify@anish.org', 'user-shadows@nathan818fr', 'BlurCinnamon@klangman']
 favorite-apps=['cinnamon-settings.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Screenshot.desktop', 'nemo.desktop']
 panels-enabled=['1:0:bottom']
 panels-height=['1:40', '2:40', '3:40', '4:40']
@@ -59,10 +59,13 @@ date-format='%d/%m/%Y'
 time-format='%H:%M:%S'
 font-date='Comic Mono 24'
 font-time='Comic Mono 64'
-lock-delay=uint32 30
+lock-delay=uint32 10
 show-album-art=false
 show-info-panel=false
 use-custom-format=true
+[org/cinnamon/desktop/session]
+idle-delay=uint32 300
+
 [org/cinnamon/desktop/sound]
 event-sounds=false
 volume-sound-enabled=false
@@ -72,7 +75,7 @@ action-middle-click-titlebar='none'
 action-scroll-titlebar='opacity'
 titlebar-font='Comic Mono 16'
 min-window-opacity=10
-mouse-button-modifier=''
+mouse-button-modifier='<Super>'
 num-workspaces=2
 workspace-names=['Primary', 'Music']
 [org/cinnamon/muffin]
@@ -100,7 +103,7 @@ name='20.3-Mint-Y-Luka-Dark-Teal'
 show-thousands=true
 
 [org/gnome/charmap]
-last-char=uint32 252
+last-char=uint32 223
 
 [org/gnome/desktop/interface]
 clock-format='24h'
@@ -122,20 +125,20 @@ audible-bell=false
 auto-raise=false
 disable-workarounds=false
 [org/gnome/file-roller/dialogs/new]
-default-extension='.zip'
+default-extension='.tar.xz'
 
 [org/gnome/gnome-system-monitor]
 cpu-colors=[(uint32 0, 'rgb(89,195,173)'), (1, 'rgb(89,195,173)'), (2, 'rgb(89,195,173)'), (3, 'rgb(89,195,173)'), (4, 'rgb(89,195,173)'), (5, 'rgb(89,195,173)'), (6, 'rgb(89,195,173)'), (7, 'rgb(89,195,173)'), (8, 'rgb(89,195,173)'), (9, 'rgb(89,195,173)'), (10, 'rgb(89,195,173)'), (11, 'rgb(89,195,173)'), (12, '#aaffc3'), (13, '#469990'), (14, '#000075'), (15, '#e6beff')]
 mem-color='rgb(89,195,173)'
 network-total-in-bits=false
 process-memory-in-iec=false
-show-dependencies=false
+show-dependencies=true
 show-whose-processes='user'
 solaris-mode=true
 update-interval=1000
 [org/gnome/gnome-system-monitor/proctree]
 col-0-visible=true
-col-0-width=474
+col-0-width=738
 col-1-visible=false
 col-8-visible=true
 col-12-visible=true
@@ -226,14 +229,14 @@ selection-menu-pin=false
 search-content-case-sensitive=false
 search-content-use-regex=false
 search-file-case-sensitive=false
-search-files-recursively=false
+search-files-recursively=true
 search-reverse-sort=true
 search-sort-column='name'
 [org/nemo/window-state]
 devices-expanded=true
-network-expanded=true
+network-expanded=false
 sidebar-bookmark-breakpoint=3
-sidebar-width=226
+sidebar-width=228
 start-with-sidebar=true
 [org/virt-manager/virt-manager]
 xmleditor-enabled=true
@@ -241,3 +244,12 @@ xmleditor-enabled=true
 [org/x/apps/portal]
 color-scheme='prefer-dark'
 
+[org/x/superlight]
+apps-sort-column='memory'
+apps-sort-order-ascending=true
+apps-visible-columns=['processes', 'name', 'cpu', 'memory']
+processes-sort-column='name'
+processes-sort-order-ascending=true
+processes-tree=false
+processes-view='all'
+processes-visible-columns=['pid', 'name', 'cpu', 'gpu', 'memory', 'disk-read']
