@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=gpu-screen-recorder -w screen -c mkv -r 60 -a "default_output" -a "default_input" -o /mnt/2tb-hdd-3/Videos/Replay
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[en_US]=gpu-screen-recorder replay
+Comment[en_US]=No description
+X-GNOME-Autostart-Delay=0

@@ -4,6 +4,7 @@
         "pages": [
             "general-page",
             "generic-settings-page",
+            "additional-settings-page",
             "component-setting-page",
             "about-page"
         ],
@@ -18,8 +19,14 @@
             "type": "page",
             "title": "Generic effect settings",
             "sections": [
-                "generic-effect-settings",
-                "monte-carlo-settings"
+                "generic-effect-settings"
+            ]
+        },
+        "additional-settings-page": {
+            "type": "page",
+            "title": "Additional settings",
+            "sections": [
+                "effect-specific-settings"
             ]
         },
         "component-setting-page": {
@@ -47,6 +54,7 @@
                 "enable-expo-effects",
                 "enable-popup-effects",
                 "enable-notification-effects",
+                "enable-osd-effects",
                 "enable-overview-effects",
                 "enable-panels-effects",
                 "enable-tooltips-effects",
@@ -66,14 +74,24 @@
                 "saturation"
             ]
         },
-        "monte-carlo-settings": {
+        "effect-specific-settings": {
             "type": "section",
-            "title": "Additional Monte Carlo specific settings",
+            "title": "Additional effect specific settings",
             "keys": [
+                "effect-specific-type",
                 "monte-carlo-iterations",
                 "monte-carlo-use-base-pixel",
                 "monte-carlo-prefer-closer-pixels",
-                "monte-carlo-label"
+                "liquid-glass-strength",
+                "liquid-glass-edge-size",
+                "liquid-glass-rim-width",
+                "liquid-glass-falloff",
+                "liquid-glass-gloss",
+                "liquid-glass-backdrop-zoom",
+                "liquid-glass-shadow",
+                "liquid-glass-rgb-fringing",
+                "liquid-glass-texture-repeat",
+                "additional-settings-label"
             ]
         },
         "component-selector-section": {
@@ -177,7 +195,9 @@
                 "windows-inclusion-list",
                 "windows-label",
                 "windows-add-button",
+                "windows-opaque-maximized",
                 "windows-titlebar-blur",
+                "windows-rounded-corners-sync",
                 "windows-atrifact-mitigation",
                 "windows-compiz-mitigation",
                 "desklets-warning",
@@ -287,19 +307,20 @@
             "Expo": 3,
             "Menus": 4,
             "Notifications": 5,
+            "OSD": 10,
             "Overview": 6,
             "Panels": 7,
             "Tooltips": 8,
             "Windows": 9
         },
         "description": "Show settings for component:",
-        "value": 7
+        "value": 5
     },
     "about-text": {
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "About",
-        "description": "\n<b>Bringing your style into focus</b>\nVersion: ext-version\n\nDeveloped by: Kevin Langman\n<a href=\"https://github.com/klangman/BlurCinnamon\">Github</a> / <a href=\"https://github.com/klangman/BlurCinnamon/issues/new\">Report an issue</a> / <a href=\"https://cinnamon-spices.linuxmint.com/extensions/view/104\">Website</a>\n\nThe rounded corners, Gaussian and Monte Carlo effects are\nbased on code by aunetx (Blur-my-shell <a href=\"https://github.com/aunetx/blur-my-shell\">Github</a> / <a href=\"https://ko-fi.com/aunetx\">Ko-fi</a>)\n\nThe Dual Kawase effect was written by <a href=\"https://github.com/Lucas-X-A\">Lucas-X-A</a>\n\nThe Overview effect is partially based on the BlurOverview extension by nailfarmer",
+        "description": "\n<b>Bringing your style into focus</b>\nVersion: ext-version\n\nDeveloped by: Kevin Langman and <a href=\"https://github.com/klangman/BlurCinnamon/graphs/contributors\">contributors</a>\n<a href=\"https://github.com/klangman/BlurCinnamon\">Github</a> / <a href=\"https://github.com/klangman/BlurCinnamon/issues/new\">Report an issue</a> / <a href=\"https://cinnamon-spices.linuxmint.com/extensions/view/104\">Website</a>\n\nThe rounded corners, Gaussian, Monte Carlo and Liquid Glass effects\nare based on Blur-my-shell code by aunetx and contributors <a href=\"https://github.com/aunetx/blur-my-shell\">Github</a> / <a href=\"https://ko-fi.com/aunetx\">Ko-fi</a>\n\nThe Dual Kawase effect was written by <a href=\"https://github.com/Lucas-X-A\">Lucas-X-A</a>\n\nThe Overview effect is partially based on the BlurOverview extension by nailfarmer\nThe Blur Cinnamon icon was designed by <a href=\"https://github.com/Selinaru\">Selinaru</a>",
         "icon": "/icon.png"
     },
     "enable-overview-effects": {
@@ -319,14 +340,14 @@
     "enable-panels-effects": {
         "type": "switch",
         "description": "Panels  (Please read tooltip)",
-        "tooltip": "Apply effects to the Panels. This option should work well with most dark desktop themes but light themes could also be made to work with some creative use of the dimming color settings and an appropriate background image. It overrides some themes settings to achieve a (semi-)transparent panel so that the blurred background is visible.",
+        "tooltip": "Apply effects to the Panels. This option should work well with most dark desktop themes but light themes could also be made to work with some creative use of the tint color settings and an appropriate background image. It overrides some themes settings to achieve a (semi-)transparent panel so that the blurred background is visible.",
         "default": true,
-        "value": false
+        "value": true
     },
     "enable-popup-effects": {
         "type": "switch",
         "description": "Popup Menus  (Please read tooltip)",
-        "tooltip": "Apply effects to panel popup menus. This option is intended for the Cinnamon (6.4) and Mint-Y dark desktop themes but might work well with other themes. Light themes are unlikely to give good results but might be made to work with some creative use of the dimming color settings and an appropriate background image. It overrides some theme settings to achieve a (semi-)transparent menu so that the blurred background is visible.",
+        "tooltip": "Apply effects to panel popup menus. This option is intended for the Cinnamon (6.4) and Mint-Y dark desktop themes but might work well with other themes. Light themes are unlikely to give good results but might be made to work with some creative use of the tint color settings and an appropriate background image. It overrides some theme settings to achieve a (semi-)transparent menu so that the blurred background is visible.",
         "default": false,
         "value": false
     },
@@ -342,7 +363,7 @@
         "description": "Notification popups (Please read tooltip)",
         "tooltip": "Apply effects to the notification popups. This option has been tested with the Cinnamon (6.4) and Mint-Y dark desktop themes but might work will with other themes. It overrides some theme settings to achieve a (semi-)transparent Notification popup window so that the blurred background is visible.",
         "default": false,
-        "value": false
+        "value": true
     },
     "enable-appswitcher-effects": {
         "type": "switch",
@@ -363,7 +384,7 @@
         "description": "Application windows (Please read tooltip)",
         "tooltip": "Allow application window background effects by adding an effect actor below all existing graphical elements of affected windows. This means the effects will NOT be visible unless the application is setup to be transparent or the \"Opacity\" setting for the window is less than 100%. The table under the \"Windows\" component settings is used to determine which applications (if any) will have effects applied to its windows, enabling this option alone will not add effects to any windows.",
         "default": false,
-        "value": false
+        "value": true
     },
     "enable-desklet-effects": {
         "type": "switch",
@@ -469,7 +490,7 @@
         "dependency": "enable-popup-effects & component-selector=4",
         "tooltip": "Override the settings found on the \"Generic effect settings\" tab with unique settings for this cinnamon component.",
         "default": false,
-        "value": false
+        "value": true
     },
     "enable-desktop-override": {
         "type": "switch",
@@ -485,7 +506,7 @@
         "dependency": "enable-notification-effects & component-selector=5",
         "tooltip": "Override the settings found on the \"Generic effect settings\" tab with unique settings for this cinnamon component.",
         "default": false,
-        "value": false
+        "value": true
     },
     "enable-appswitcher-override": {
         "type": "switch",
@@ -493,7 +514,7 @@
         "dependency": "enable-appswitcher-effects & component-selector=0",
         "tooltip": "Override the settings found on the \"Generic effect settings\" tab with unique settings for this cinnamon component.",
         "default": false,
-        "value": false
+        "value": true
     },
     "enable-tooltips-override": {
         "type": "switch",
@@ -517,7 +538,7 @@
         "dependency": "enable-osd-effects & component-selector=10",
         "tooltip": "Override the settings found on the \"Generic effect settings\" tab with unique settings for this cinnamon component.",
         "default": false,
-        "value": false
+        "value": true
     },
     "enable-desklets-unique-settings": {
         "type": "switch",
@@ -586,7 +607,7 @@
             },
             {
                 "id": "opacity",
-                "title": "Dim",
+                "title": "Tint",
                 "type": "integer",
                 "default": 40,
                 "min": 0,
@@ -596,7 +617,8 @@
                 "id": "color",
                 "title": "Color",
                 "type": "string",
-                "default": "rgb(0,0,0)"
+                "default": "rgb(0,0,0)",
+                "color-chooser": "opaque"
             },
             {
                 "id": "blurtype",
@@ -612,7 +634,9 @@
                     "Monte Carlo static blur": 5,
                     "Monte Carlo dynamic blur": 6,
                     "Dual Kawase static blur": 7,
-                    "Dual Kawase dynamic blur": 8
+                    "Dual Kawase dynamic blur": 8,
+                    "Liquid Glass static blur": 9,
+                    "Liquid Glass dynamic blur": 10
                 }
             },
             {
@@ -638,7 +662,7 @@
                 "default": ""
             }
         ],
-        "tooltip": "Defines the effects applied to different panels. If a panel does not meet the criteria of any enabled entry in this list, it will have no effects applied. The settings of the first entry in this list that can apply to a given panel will take effect. The \"Custom\" check box determines if the generic effect settings are uses or this tables custom settings. The color field is in the rgb(#,#,#) syntax and black will be used when a color is not provided or is in an incorrect syntax",
+        "tooltip": "Defines the effects applied to different panels. If a panel does not meet the criteria of any enabled entry in this list, it will have no effects applied. The settings of the first entry in this list that can apply to a given panel will take effect. The \"Custom\" check box determines if the generic effect settings are uses or this tables custom settings. Click a color in the table to change it",
         "default": [
             {
                 "enabled": true,
@@ -736,7 +760,7 @@
         "type": "switch",
         "description": "Brighten panel when mouse is hovering a panel",
         "dependency": "enable-panels-effects & component-selector=7",
-        "tooltip": "While the mouse is hovering over a panel, set the panels dimming to 0 and the saturation to 100 so that the panel appears brighter. This setting is only effective when either dimming is greater than 0 or saturation is less than 100.",
+        "tooltip": "While the mouse is hovering over a panel, set the panels tint strength to 0 and the saturation to 100 so that the panel appears brighter. This setting is only effective when either the tint strength is greater than 0 or saturation is less than 100.",
         "default": false,
         "value": false
     },
@@ -744,7 +768,7 @@
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "CompactScale",
-        "description": "Dim/Colorize Background (%)",
+        "description": "Tint strength (%)",
         "min": 0,
         "max": 100,
         "default": 40,
@@ -753,9 +777,9 @@
     },
     "blendColor": {
         "type": "colorchooser",
-        "description": "Dimming overlay color",
+        "description": "Tint color",
         "default": "rgb(0,0,0)",
-        "tooltip": "Defines the color that is blended into the background based on the dimming control above. Use black for a normal dimming effect or some other color for a color blend effect",
+        "tooltip": "Defines the color that is blended into the background, weighted by the tint strength above. Use black to dim the background or some other color for a color blend effect",
         "value": "rgb(0,0,0)"
     },
     "blurType": {
@@ -769,18 +793,20 @@
             "Monte Carlo static blur": 5,
             "Monte Carlo dynamic blur (if applicable)": 6,
             "Dual Kawase static blur": 7,
-            "Dual Kawase dynamic blur (if applicable)": 8
+            "Dual Kawase dynamic blur (if applicable)": 8,
+            "Liquid Glass static blur": 9,
+            "Liquid Glass dynamic blur (if applicable)": 10
         },
         "description": "Type of blur effect",
         "tooltip": "What type of blur algorithm should be used to blur the background",
-        "value": 2
+        "value": 4
     },
     "show-blur-info": {
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "LabelWithTooltip",
         "description": "💡 Blur Algorithm Guide (see tooltip)",
-        "tooltip": "<b>Blur Algorithm Guide:</b>\n <b>• Gaussian:</b> Good quality smooth blur, can be GPU intensive.\n <b>• Dual Kawase:</b> High quality smooth blur, optimized for low-end GPUs.\n <b>• Monte Carlo:</b> Grainy, frosted-glass style noisy blur.\n <b>• Simple:</b> Basic subtle blur for ancient computers.\n\n<b>Static vs Dynamic:</b>\n <b>• Dynamic:</b> Blurs background elements behind the blurred element in real-time.\n <b>• Static:</b> Only blurs the wallpaper, like x-ray vision to the desktop wallpaper."
+        "tooltip": "<b>Blur Algorithm Guide:</b>\n <b>• Gaussian:</b> Good quality smooth blur, can be GPU intensive.\n <b>• Dual Kawase:</b> High quality smooth blur, optimized for low-end GPUs.\n <b>• Monte Carlo:</b> Grainy, frosted-glass style noisy blur.\n <b>• Liquid Glass:</b> Glossy translucent glass with refracted edges and rim lighting.\n <b>• Simple:</b> Basic subtle blur for ancient computers.\n\n<b>Static vs Dynamic:</b>\n <b>• Dynamic:</b> Blurs background elements behind the blurred element in real-time.\n <b>• Static:</b> Only blurs the wallpaper, like x-ray vision to the desktop wallpaper."
     },
     "radius": {
         "type": "custom",
@@ -807,6 +833,17 @@
         "default": 100,
         "value": 100
     },
+    "effect-specific-type": {
+        "type": "combobox",
+        "default": 0,
+        "options": {
+            "Monte Carlo": 0,
+            "Liquid Glass": 1
+        },
+        "description": "Additional settings for",
+        "tooltip": "Choose which effect's additional settings to show and edit.",
+        "value": 0
+    },
     "monte-carlo-iterations": {
         "type": "custom",
         "file": "CustomWidgets.py",
@@ -816,12 +853,14 @@
         "max": 64,
         "default": 5,
         "step": 1,
+        "dependency": "effect-specific-type=0",
         "tooltip": "Increasing number of iterations will make the blur appear smoother at the cost of some GPU power.",
         "value": 5
     },
     "monte-carlo-use-base-pixel": {
         "type": "switch",
         "description": "Use base pixel",
+        "dependency": "effect-specific-type=0",
         "tooltip": "Whether or not the original pixel is counted for the blur. If it is, the image will be more legible.",
         "default": true,
         "value": true
@@ -829,22 +868,139 @@
     "monte-carlo-prefer-closer-pixels": {
         "type": "switch",
         "description": "Prefer closer pixels",
+        "dependency": "effect-specific-type=0",
         "tooltip": "Whether or not the pixels that are closer to the original pixel will have more weight.",
         "default": true,
         "value": true
     },
-    "monte-carlo-label": {
+    "additional-settings-label": {
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "LabelWithTooltip",
-        "description": "💡 The above Monte Carlo settings are used globally for all components",
-        "tooltip": "The above Monte Carlo settings are used globally for all components that are configured to use the Monte Carlo blur algorithm, these settings can not be configured separately for each component"
+        "description": "💡 The above additional settings are used globally for all components that use this effect",
+        "tooltip": "The above additional settings are used globally for all components that are configured to use the selected algorithm, these settings can not be configured separately for each component"
+    },
+    "liquid-glass-strength": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Refraction scale",
+        "min": 0,
+        "max": 1,
+        "default": 0.42,
+        "step": 0.01,
+        "dependency": "effect-specific-type=1",
+        "tooltip": "How strongly the glass bends the sampled blur texture.",
+        "value": 0.42
+    },
+    "liquid-glass-edge-size": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Bezel width",
+        "min": 1,
+        "max": 100,
+        "default": 22,
+        "step": 1,
+        "dependency": "effect-specific-type=1",
+        "tooltip": "How far the liquid-glass lens reaches inward from the edge.",
+        "value": 22
+    },
+    "liquid-glass-rim-width": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Rim spread",
+        "min": 1,
+        "max": 6.5,
+        "default": 4.8,
+        "step": 0.1,
+        "dependency": "effect-specific-type=1",
+        "tooltip": "How far the refraction eases inward from the glass edge.",
+        "value": 4.8
+    },
+    "liquid-glass-falloff": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Glass thickness",
+        "min": 0.25,
+        "max": 8,
+        "default": 2.4,
+        "step": 0.05,
+        "dependency": "effect-specific-type=1",
+        "tooltip": "Depth used by the Snell-style refraction profile.",
+        "value": 2.4
+    },
+    "liquid-glass-gloss": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Fresnel glare",
+        "min": 0,
+        "max": 1,
+        "default": 0.55,
+        "step": 0.01,
+        "dependency": "effect-specific-type=1",
+        "tooltip": "Strength of the Schlick fresnel rim glare from the glass edge.",
+        "value": 0.55
+    },
+    "liquid-glass-backdrop-zoom": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Backdrop zoom",
+        "min": 0.1,
+        "max": 4,
+        "default": 1,
+        "step": 0.01,
+        "dependency": "effect-specific-type=1",
+        "tooltip": "Zoom level of the backdrop visible through the glass.",
+        "value": 1
+    },
+    "liquid-glass-shadow": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Inner shadow",
+        "min": 0,
+        "max": 1,
+        "default": 0.28,
+        "step": 0.01,
+        "dependency": "effect-specific-type=1",
+        "tooltip": "Darkens the lower and inner edge for a deeper glass surface.",
+        "value": 0.28
+    },
+    "liquid-glass-rgb-fringing": {
+        "type": "custom",
+        "file": "CustomWidgets.py",
+        "widget": "CompactScale",
+        "description": "Chromatic dispersion",
+        "min": 0,
+        "max": 1,
+        "default": 0.08,
+        "step": 0.01,
+        "dependency": "effect-specific-type=1",
+        "tooltip": "Physical per-channel refraction dispersion at the glass edge.",
+        "value": 0.08
+    },
+    "liquid-glass-texture-repeat": {
+        "type": "combobox",
+        "default": 0,
+        "options": {
+            "Clamp": 0,
+            "Mirror": 1
+        },
+        "description": "Edge behavior",
+        "dependency": "effect-specific-type=1",
+        "tooltip": "How texture coordinates outside the actor are sampled.",
+        "value": 0
     },
     "overview-opacity": {
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "CompactScale",
-        "description": "Dim/Colorize Background (%)",
+        "description": "Tint strength (%)",
         "min": 0,
         "max": 100,
         "default": 40,
@@ -854,10 +1010,10 @@
     },
     "overview-blendColor": {
         "type": "colorchooser",
-        "description": "Dimming overlay color",
+        "description": "Tint color",
         "default": "rgb(0,0,0)",
         "dependency": "enable-overview-effects & component-selector=6 & enable-overview-override",
-        "tooltip": "Defines the color that is blended into the background based on the dimming control above. Use black for a normal dimming effect or some other color for a color blend effect",
+        "tooltip": "Defines the color that is blended into the background, weighted by the tint strength above. Use black to dim the background or some other color for a color blend effect",
         "value": "rgb(0,0,0)"
     },
     "overview-blurType": {
@@ -905,7 +1061,7 @@
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "CompactScale",
-        "description": "Dim/Colorize Background (%)",
+        "description": "Tint strength (%)",
         "min": 0,
         "max": 100,
         "default": 40,
@@ -915,10 +1071,10 @@
     },
     "expo-blendColor": {
         "type": "colorchooser",
-        "description": "Dimming overlay color",
+        "description": "Tint color",
         "default": "rgb(0,0,0)",
         "dependency": "enable-expo-effects & component-selector=3 & enable-expo-override",
-        "tooltip": "Defines the color that is blended into the background based on the dimming control above. Use black for a normal dimming effect or some other color for a color blend effect",
+        "tooltip": "Defines the color that is blended into the background, weighted by the tint strength above. Use black to dim the background or some other color for a color blend effect",
         "value": "rgb(0,0,0)"
     },
     "expo-blurType": {
@@ -966,20 +1122,20 @@
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "CompactScale",
-        "description": "Dim/Colorize Background (%)",
+        "description": "Tint strength (%)",
         "min": 0,
         "max": 100,
         "default": 30,
         "step": 1,
         "dependency": "enable-panels-effects & component-selector=7 & !enable-panel-unique-settings & enable-panels-override",
-        "value": 30
+        "value": 40
     },
     "panels-blendColor": {
         "type": "colorchooser",
-        "description": "Dimming overlay color",
+        "description": "Tint color",
         "default": "rgb(0,0,0)",
         "dependency": "enable-panels-effects & component-selector=7 & !enable-panel-unique-settings & enable-panels-override",
-        "tooltip": "Defines the color that is blended into the background based on the dimming control above. Use black for a normal dimming effect or some other color for a color blend effect",
+        "tooltip": "Defines the color that is blended into the background, weighted by the tint strength above. Use black to dim the background or some other color for a color blend effect",
         "value": "rgb(0,0,0)"
     },
     "panels-blurType": {
@@ -994,7 +1150,9 @@
             "Monte Carlo static blur": 5,
             "Monte Carlo dynamic blur": 6,
             "Dual Kawase static blur": 7,
-            "Dual Kawase dynamic blur": 8
+            "Dual Kawase dynamic blur": 8,
+            "Liquid Glass static blur": 9,
+            "Liquid Glass dynamic blur": 10
         },
         "description": "Type of background effect",
         "tooltip": "What type of background effect should be applied",
@@ -1012,7 +1170,7 @@
         "tooltip": "Adjusts the intensity of the blur effect by changing the radius use by the effect.",
         "default": 6,
         "dependency": "enable-panels-effects & component-selector=7 & !enable-panel-unique-settings & panels-blurType>1 & panels-blurType!=3 & enable-panels-override",
-        "value": 4
+        "value": 6
     },
     "panels-saturation": {
         "type": "custom",
@@ -1052,34 +1210,34 @@
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "CompactScale",
-        "description": "Dim/Colorize Background (%)",
+        "description": "Tint strength (%)",
         "min": 0,
         "max": 100,
         "default": 50,
         "step": 1,
         "dependency": "enable-popup-effects & component-selector=4 & enable-popup-override",
-        "value": 50
+        "value": 70
     },
     "popup-accent-opacity": {
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "CompactScale",
-        "description": "Additional popup menu accent elements dimming (%)",
+        "description": "Additional popup menu accent elements tint (%)",
         "min": 0,
         "max": 100,
         "default": 50,
         "step": 1,
         "dependency": "enable-popup-effects & component-selector=4",
-        "tooltip": "Defines the additional dimming applied to the popup menu accent elements (i.e. the main menu favorites box and entry boxes) which allow these elements to stand out from the other popup menu areas",
+        "tooltip": "Defines the additional tint applied to the popup menu accent elements (i.e. the main menu favorites box and entry boxes) which allow these elements to stand out from the other popup menu areas",
         "value": 50
     },
     "popup-blendColor": {
         "type": "colorchooser",
-        "description": "Dimming overlay color",
+        "description": "Tint color",
         "default": "rgb(0,0,0)",
         "dependency": "enable-popup-effects & component-selector=4 & enable-popup-override",
-        "tooltip": "Defines the color that is blended into the background based on the dimming control above. Use black for a normal dimming effect or some other color for a color blend effect",
-        "value": "rgb(0,0,0)"
+        "tooltip": "Defines the color that is blended into the background, weighted by the tint strength above. Use black to dim the background or some other color for a color blend effect",
+        "value": "rgb(47,47,47)"
     },
     "popup-blurType": {
         "type": "combobox",
@@ -1093,12 +1251,14 @@
             "Monte Carlo static blur": 5,
             "Monte Carlo dynamic blur": 6,
             "Dual Kawase static blur": 7,
-            "Dual Kawase dynamic blur": 8
+            "Dual Kawase dynamic blur": 8,
+            "Liquid Glass static blur": 9,
+            "Liquid Glass dynamic blur": 10
         },
         "description": "Type of background effect",
         "tooltip": "What type of background effect should be applied",
         "dependency": "enable-popup-effects & component-selector=4 & enable-popup-override",
-        "value": 2
+        "value": 4
     },
     "popup-radius": {
         "type": "custom",
@@ -1146,7 +1306,7 @@
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "CompactScale",
-        "description": "Dim/Colorize background Image (%)",
+        "description": "Tint background image strength (%)",
         "min": 0,
         "max": 100,
         "default": 50,
@@ -1156,10 +1316,10 @@
     },
     "desktop-blendColor": {
         "type": "colorchooser",
-        "description": "Dimming overlay color",
+        "description": "Tint color",
         "default": "rgb(0,0,0)",
         "dependency": "enable-desktop-effects & component-selector=2 & enable-desktop-override",
-        "tooltip": "Defines the color that is blended into the background based on the dimming control above. Use black for a normal dimming effect or some other color for a color blend effect",
+        "tooltip": "Defines the color that is blended into the background, weighted by the tint strength above. Use black to dim the background or some other color for a color blend effect",
         "value": "rgb(0,0,0)"
     },
     "desktop-blurType": {
@@ -1207,20 +1367,20 @@
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "CompactScale",
-        "description": "Dim/Colorize Background (%)",
+        "description": "Tint strength (%)",
         "min": 0,
         "max": 100,
         "default": 40,
         "step": 1,
         "dependency": "enable-notification-effects & component-selector=5 & enable-notification-override",
-        "value": 40
+        "value": 70.0
     },
     "notification-blendColor": {
         "type": "colorchooser",
-        "description": "Dimming overlay color",
+        "description": "Tint color",
         "default": "rgb(0,0,0)",
         "dependency": "enable-notification-effects & component-selector=5 & enable-notification-override",
-        "tooltip": "Defines the color that is blended into the background based on the dimming control above. Use black for a normal dimming effect or some other color for a color blend effect",
+        "tooltip": "Defines the color that is blended into the background, weighted by the tint strength above. Use black to dim the background or some other color for a color blend effect",
         "value": "rgb(0,0,0)"
     },
     "notification-blurType": {
@@ -1235,12 +1395,14 @@
             "Monte Carlo static blur": 5,
             "Monte Carlo dynamic blur": 6,
             "Dual Kawase static blur": 7,
-            "Dual Kawase dynamic blur": 8
+            "Dual Kawase dynamic blur": 8,
+            "Liquid Glass static blur": 9,
+            "Liquid Glass dynamic blur": 10
         },
         "description": "Type of background effect",
         "dependency": "enable-notification-effects & component-selector=5 & enable-notification-override",
         "tooltip": "What type of background effect should be applied",
-        "value": 2
+        "value": 4
     },
     "notification-radius": {
         "type": "custom",
@@ -1303,20 +1465,20 @@
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "CompactScale",
-        "description": "Dim/Colorize Background (%)",
+        "description": "Tint strength (%)",
         "min": 0,
         "max": 100,
         "default": 40,
         "step": 1,
         "dependency": "enable-appswitcher-effects & component-selector=0 & enable-appswitcher-override",
-        "value": 40
+        "value": 60
     },
     "appswitcher-blendColor": {
         "type": "colorchooser",
-        "description": "Dimming overlay color",
+        "description": "Tint color",
         "default": "rgb(0,0,0)",
         "dependency": "enable-appswitcher-effects & component-selector=0 & enable-appswitcher-override",
-        "tooltip": "Defines the color that is blended into the background based on the dimming control above. Use black for a normal dimming effect or some other color for a color blend effect",
+        "tooltip": "Defines the color that is blended into the background, weighted by the tint strength above. Use black to dim the background or some other color for a color blend effect",
         "value": "rgb(0,0,0)"
     },
     "appswitcher-blurType": {
@@ -1330,12 +1492,14 @@
             "Monte Carlo static blur": 5,
             "Monte Carlo dynamic blur": 6,
             "Dual Kawase static blur": 7,
-            "Dual Kawase dynamic blur": 8
+            "Dual Kawase dynamic blur": 8,
+            "Liquid Glass static blur": 9,
+            "Liquid Glass dynamic blur": 10
         },
         "description": "Type of blur effect",
         "dependency": "enable-appswitcher-effects & component-selector=0 & enable-appswitcher-override",
         "tooltip": "What type of blur algorithm should be used to blur the background. A dynamic blur type can be used for the standard switcher but static blurring is always used for the 3D switchers as they do not benefit from dynamic effects.",
-        "value": 2
+        "value": 4
     },
     "appswitcher-radius": {
         "type": "custom",
@@ -1367,7 +1531,7 @@
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "CompactScale",
-        "description": "Dim/Colorize Background (%)",
+        "description": "Tint strength (%)",
         "min": 0,
         "max": 100,
         "default": 40,
@@ -1377,10 +1541,10 @@
     },
     "tooltips-blendColor": {
         "type": "colorchooser",
-        "description": "Dimming overlay color",
+        "description": "Tint color",
         "default": "rgb(0,0,0)",
         "dependency": "enable-tooltips-effects & component-selector=8 & enable-tooltips-override",
-        "tooltip": "Defines the color that is blended into the background based on the dimming control above. Use black for a normal dimming effect or some other color for a color blend effect",
+        "tooltip": "Defines the color that is blended into the background, weighted by the tint strength above. Use black to dim the background or some other color for a color blend effect",
         "value": "rgb(0,0,0)"
     },
     "tooltips-blurType": {
@@ -1395,7 +1559,9 @@
             "Monte Carlo static blur": 5,
             "Monte Carlo dynamic blur": 6,
             "Dual Kawase static blur": 7,
-            "Dual Kawase dynamic blur": 8
+            "Dual Kawase dynamic blur": 8,
+            "Liquid Glass static blur": 9,
+            "Liquid Glass dynamic blur": 10
         },
         "description": "Type of background effect",
         "dependency": "enable-tooltips-effects & component-selector=8 & enable-tooltips-override",
@@ -1432,7 +1598,7 @@
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "CompactScale",
-        "description": "Dim/Colorize background Image (%)",
+        "description": "Tint background image strength (%)",
         "min": 0,
         "max": 100,
         "default": 50,
@@ -1442,10 +1608,10 @@
     },
     "desklets-blendColor": {
         "type": "colorchooser",
-        "description": "Dimming overlay color",
+        "description": "Tint color",
         "default": "rgb(0,0,0)",
         "dependency": "enable-desklet-effects & component-selector=1 & !enable-desklets-unique-settings & enable-desklets-override",
-        "tooltip": "Defines the color that is blended into the background based on the dimming control above. Use black for a normal dimming effect or some other color for a color blend effect",
+        "tooltip": "Defines the color that is blended into the background, weighted by the tint strength above. Use black to dim the background or some other color for a color blend effect",
         "value": "rgb(0,0,0)"
     },
     "desklets-blurType": {
@@ -1459,7 +1625,9 @@
             "Monte Carlo static blur": 5,
             "Monte Carlo dynamic blur": 6,
             "Dual Kawase static blur": 7,
-            "Dual Kawase dynamic blur": 8
+            "Dual Kawase dynamic blur": 8,
+            "Liquid Glass static blur": 9,
+            "Liquid Glass dynamic blur": 10
         },
         "description": "Type of blur effect",
         "tooltip": "What type of blur algorithm should be used to blur the background",
@@ -1510,7 +1678,7 @@
         "type": "custom",
         "file": "CustomWidgets.py",
         "widget": "CompactScale",
-        "description": "Dim/Colorize background Image (%)",
+        "description": "Tint background image strength (%)",
         "min": 0,
         "max": 100,
         "default": 50,
@@ -1520,10 +1688,10 @@
     },
     "osd-blendColor": {
         "type": "colorchooser",
-        "description": "Dimming overlay color",
+        "description": "Tint color",
         "default": "rgb(0,0,0)",
         "dependency": "enable-osd-effects & component-selector=10 & enable-osd-override",
-        "tooltip": "Defines the color that is blended into the background based on the dimming control above. Use black for a normal dimming effect or some other color for a color blend effect",
+        "tooltip": "Defines the color that is blended into the background, weighted by the tint strength above. Use black to dim the background or some other color for a color blend effect",
         "value": "rgb(0,0,0)"
     },
     "osd-blurType": {
@@ -1537,12 +1705,14 @@
             "Monte Carlo static blur": 5,
             "Monte Carlo dynamic blur": 6,
             "Dual Kawase static blur": 7,
-            "Dual Kawase dynamic blur": 8
+            "Dual Kawase dynamic blur": 8,
+            "Liquid Glass static blur": 9,
+            "Liquid Glass dynamic blur": 10
         },
         "description": "Type of blur effect",
         "tooltip": "What type of blur algorithm should be used to blur the background",
         "dependency": "enable-osd-effects & component-selector=10 & enable-osd-override",
-        "value": 2
+        "value": 4
     },
     "osd-radius": {
         "type": "custom",
@@ -1604,7 +1774,7 @@
             },
             {
                 "id": "opacity",
-                "title": "Dim",
+                "title": "Tint",
                 "type": "integer",
                 "default": 0,
                 "min": 0,
@@ -1614,7 +1784,8 @@
                 "id": "color",
                 "title": "Color",
                 "type": "string",
-                "default": "rgb(0,0,0)"
+                "default": "rgb(0,0,0)",
+                "color-chooser": "opaque"
             },
             {
                 "id": "blurtype",
@@ -1629,7 +1800,9 @@
                     "Monte Carlo static blur": 5,
                     "Monte Carlo dynamic blur": 6,
                     "Dual Kawase static blur": 7,
-                    "Dual Kawase dynamic blur": 8
+                    "Dual Kawase dynamic blur": 8,
+                    "Liquid Glass static blur": 9,
+                    "Liquid Glass dynamic blur": 10
                 }
             },
             {
@@ -1766,7 +1939,22 @@
         "value": [
             {
                 "enabled": false,
+                "application": "Default window settings",
+                "window_opacity": 100,
+                "override": false,
+                "opacity": 0,
+                "color": "rgb(0,0,0)",
+                "blurtype": 2,
+                "radius": 10,
+                "saturation": 100,
+                "corner_radius": 8,
+                "corner_top": true,
+                "corner_bottom": false
+            },
+            {
+                "enabled": false,
                 "application": "Alacritty.desktop",
+                "window_opacity": 100,
                 "override": true,
                 "opacity": 0,
                 "color": "rgb(0,0,0)",
@@ -1780,6 +1968,7 @@
             {
                 "enabled": false,
                 "application": "com.gexperts.Tilix.desktop",
+                "window_opacity": 100,
                 "override": true,
                 "opacity": 0,
                 "color": "rgb(0,0,0)",
@@ -1793,6 +1982,7 @@
             {
                 "enabled": false,
                 "application": "org.gnome.Ptyxis.desktop",
+                "window_opacity": 100,
                 "override": true,
                 "opacity": 0,
                 "color": "rgb(0,0,0)",
@@ -1806,6 +1996,7 @@
             {
                 "enabled": false,
                 "application": "kitty.desktop",
+                "window_opacity": 100,
                 "override": true,
                 "opacity": 0,
                 "color": "rgb(0,0,0)",
@@ -1819,6 +2010,7 @@
             {
                 "enabled": false,
                 "application": "org.kde.konsole.desktop",
+                "window_opacity": 100,
                 "override": true,
                 "opacity": 0,
                 "color": "rgb(0,0,0)",
@@ -1828,15 +2020,29 @@
                 "corner_radius": 10,
                 "corner_top": true,
                 "corner_bottom": false
+            },
+            {
+                "enabled": true,
+                "application": "org.gnome.Terminal.desktop",
+                "window_opacity": 100,
+                "override": true,
+                "opacity": 0,
+                "color": "rgb(0,0,0)",
+                "blurtype": 4,
+                "radius": 10,
+                "saturation": 100,
+                "corner_radius": 8,
+                "corner_top": true,
+                "corner_bottom": false
             }
         ]
     },
     "windows-add-button": {
         "type": "button",
-        "description": "Add entry for the application of the most recently focused window",
-        "callback": "on_window_add_button_pressed",
+        "description": "Pick a window to blur…",
+        "callback": "on_window_pick_button_pressed",
         "dependency": "enable-window-effects & component-selector=9",
-        "tooltip": "Focus a window you want to enable window effects on then return here and press this button."
+        "tooltip": "Click this, then click any window to add its application to the window list above with effects enabled. If the application is already in the list but disabled, it is enabled instead. Press Esc or right-click to cancel."
     },
     "windows-compiz-mitigation": {
         "type": "switch",
@@ -1844,7 +2050,7 @@
         "description": "Disable \"Compiz\" effects for windows with Blur Cinnamon effects",
         "dependency": "enable-window-effects & component-selector=9",
         "tooltip": "When enabled, the window moving effect created by the \"Compiz windows effect\" extension will be disabled for windows with Blur Cinnamon effects applied. This option will have no effect unless the \"Compiz window effect\" extension is installed and active.",
-        "value": true
+        "value": false
     },
     "windows-atrifact-mitigation": {
         "type": "switch",
@@ -1854,13 +2060,29 @@
         "tooltip": "When enabled, steps will be taken to eliminate background graphical artifacts for windows that use dynamic blur effects. The mitigation steps will have some minor persistent CPU costs when a dynamic blurred window is on top of two or more other windows. This option is recommended unless you are using video wallpaper like Hidamari",
         "value": true
     },
+    "windows-opaque-maximized": {
+        "type": "switch",
+        "default": false,
+        "description": "Make windows opaque when maximized or full-screen",
+        "dependency": "enable-window-effects & component-selector=9",
+        "tooltip": "When enabled, windows with Blur Cinnamon effects will be made fully opaque while they are maximized or full-screen, ignoring the \"Opacity\" setting in the table above. The configured opacity is restored once the window is no longer maximized or full-screen.",
+        "value": true
+    },
     "windows-titlebar-blur": {
         "type": "switch",
         "default": false,
         "description": "Blur window title bars (please read tooltip)",
-        "dependency": "enable-window-effects & component-selector=9",
+        "dependency": "enable-window-effects & component-selector=9 & !is-wayland",
         "tooltip": "When enabled, the title bar area under most windows will be blurred excluding GTK4 windows and windows with custom title bars. This behaves like \"Default window settings\" entry above and even uses its settings, but with this option only title bar areas are blurred rather than the entire window. Note: The title bar blurring will only be visible when the title bars are configured to be semi-transparent which MUST be done using CSS. See the Blur Cinnamon website for instructions.",
-        "value": false
+        "value": true
+    },
+    "windows-rounded-corners-sync": {
+        "type": "switch",
+        "default": true,
+        "description": "Match the corner radius set by the \"Rounded Corners\" extension",
+        "dependency": "enable-window-effects & component-selector=9",
+        "tooltip": "When enabled, windows rounded by the \"Rounded Corners\" extension will use that extension's corner radius for their Blur Cinnamon effects instead of the corner settings in the table above. Windows, or the top/bottom corners of a window, that \"Rounded Corners\" is not rounding (e.g. maximized windows) still use the table settings. This option will have no effect unless the \"Rounded Corners\" extension is installed and active.",
+        "value": true
     },
     "desklets-auto": {
         "type": "switch",
@@ -1903,7 +2125,7 @@
             },
             {
                 "id": "opacity",
-                "title": "Dim",
+                "title": "Tint",
                 "type": "integer",
                 "default": 0,
                 "min": 0,
@@ -1913,7 +2135,8 @@
                 "id": "color",
                 "title": "Color",
                 "type": "string",
-                "default": "rgb(0,0,0)"
+                "default": "rgb(0,0,0)",
+                "color-chooser": "opaque"
             },
             {
                 "id": "blurtype",
@@ -1928,7 +2151,9 @@
                     "Monte Carlo static blur": 5,
                     "Monte Carlo dynamic blur": 6,
                     "Dual Kawase static blur": 7,
-                    "Dual Kawase dynamic blur": 8
+                    "Dual Kawase dynamic blur": 8,
+                    "Liquid Glass static blur": 9,
+                    "Liquid Glass dynamic blur": 10
                 }
             },
             {
@@ -1955,12 +2180,17 @@
     "ext-version": {
         "type": "generic",
         "default": "",
-        "value": "2.6.1"
+        "value": "2.7.1"
     },
     "new-install": {
         "type": "generic",
         "default": 1,
         "value": 0
     },
-    "__md5__": "21a6b27287544a28249226d4f7c43381"
+    "is-wayland": {
+        "type": "generic",
+        "default": false,
+        "value": false
+    },
+    "__md5__": "0e42f40bdf5bb2c3cc817eb3c649da1c"
 }
