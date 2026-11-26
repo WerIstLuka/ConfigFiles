@@ -14,9 +14,9 @@ def copyFile(path:str) -> int:
 	except FileExistsError:
 		pass
 	if path[-1] == "*":
-		os.system(f"bash -c 'cp -r \"{path[:-1]}\"* \"{directory}\"'")
+		return os.system(f"bash -c 'cp -r \"{path[:-1]}\"* \"{directory}\"'")
 	else:
-		os.system(f"bash -c 'cp -r \"{path}\" \"{directory}\"'")
+		return os.system(f"bash -c 'cp -r \"{path}\" \"{directory}\"'")
 
 def CopyFiles(files:List[str]) -> None:
 	for file in files:
