@@ -1,9 +1,7 @@
 #!/bin/python3
 
 import os
-
-# privates
-# discord, lutris, vencord
+import libGetConfig
 
 # to include a directory use `/*` at the end
 files = [
@@ -40,15 +38,4 @@ files = [
 	"/home/luka/.profile",
 ]
 
-def copyFile(path:str) -> int:
-	directory = os.path.dirname(path)[1:]
-	try:
-		os.makedirs(directory)
-	except FileExistsError:
-		pass
-	return os.system(f"cp -r {file} {os.path.dirname(path)[1:]}/")
-
-for file in files:
-	if copyFile(file):
-		print(f"[ERORR] could not copy file \"{file}\"")
-		exit(1)
+libGetConfig.CopyFiles(files)
