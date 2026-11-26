@@ -15,7 +15,7 @@ sudo apt install -y steam dconf-cli openssh-server zoxide eza extrepo ghex gimp 
 sudo extrepo enable librewolf
 
 #gonna kill myself because of this
-cd packages
+cd OTHER/packages
 downloadGitRelease(){
 	url=$(curl -i $1 | sed 's/\r$//' | grep -Po "(?<=location: ).+" | sed s/tag/download/)
 	wget $url/$2
@@ -24,13 +24,13 @@ downloadGitRelease(){
 downloadGitRelease "https://github.com/WerIstLuka/20.3-Mint-Y-Luka-Icons/releases/latest" "20.3-Mint-Y-Luka-Icons.deb"
 downloadGitRelease "https://github.com/WerIstLuka/20.3-Mint-Y-Luka-Themes/releases/latest" "20.3-Mint-Y-Luka-Themes.deb"
 downloadGitRelease "https://github.com/WerIstLuka/LukaMenu/releases/latest" "luka-menu.deb"
-cd ..
+cd ../..
 
 wget https://dtinth.github.io/comic-mono-font/ComicMono.ttf -O ComicMono.ttf > /dev/null
 
 sudo apt update
 sudo apt install librewolf -y
-sudo dpkg -i ./*.deb
+sudo dpkg -i ./OTHER/packages/*.deb
 
 sudo chown -R root:root etc
 sudo cp -r etc /
@@ -46,7 +46,7 @@ popd > /dev/null
 echo "installing extensions"
 git clone https://github.com/linuxmint/cinnamon-spices-extensions > /dev/null
 pushd cinnamon-spices-extensions > /dev/null
-cp -r {transparent-panels@germanfr/files/*,compiz-windows-effect@hermes83.github.com/files/*,opacify@anish.org/files/*,opacity-slider@neatnit/files/*,user-shadows@nathan818fr} ~/.local/share/cinnamon/extensions/
+cp -r {transparent-panels@germanfr/files/*,compiz-windows-effect@hermes83.github.com/files/*,opacify@anish.org/files/*,opacity-slider@neatnit/files/*,user-shadows@nathan818fr/files/*,BlurCinnamon@klangman/files/*} ~/.local/share/cinnamon/extensions/
 popd > /dev/null
 
 echo "applying .config"
@@ -59,4 +59,4 @@ echo "applying other dot files"
 cp home/luka/.bashrc home/luka/.profile ~/
 
 echo "applying dconf settings"
-dconf load / < dconf/dconf
+dconf load / < OTHER/dconf/dconf
