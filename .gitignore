@@ -1,4 +1,7 @@
-private/home
-private/OTHER
+private/*
 private/__pycache__
 public/__pycache__
+
+!private/apply-config.sh
+!private/getPrivateConfig.py
+!private/libGetConfig.py
